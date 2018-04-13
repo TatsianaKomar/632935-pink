@@ -29,13 +29,13 @@
       <h1 class="main-title">Конкурс на самое безбашенное путешествие с Пинк</h1>
     </header>
     <main class="main-page">
-      <h2 class="visually-hiiden">Форма для участия в конкурсе</h2>
+      <h2 class="visually-hidden">Форма для участия в конкурсе</h2>
       <form class="contest">
         <p class="contest__description">
           Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните 
         </p>
         <fieldset class="contest__user">
-          <legend class="visually-hiiden">ФИО</legend>
+          <legend class="visually-hidden">ФИО</legend>
             <label class="contest__label" for="user-surname">Фамилия:</label>
             <input class="contest__input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию*" required>
             <label class="contest__label" for="user-name">Имя:</label>
@@ -57,6 +57,13 @@
             <label class="contest__label" for="checkbox-5">Удержал башню</label>
             <input class="contest__input" type="checkbox" name="achive-checkbox" id="checkbox-6">   
             <label class="contest__label" for="checkbox-6">Разгромил отель</label>   
+        </fieldset>
+        <fieldset class="contest__contacts">
+          <legend class="visually-hidden">Ваши контакты</legend>
+            <label class="contest__label" for="user-tel">Номер телефона</label>
+            <input class="contest__input" type="text" name="user-tel" id="user-tel" placeholder="Телефон, пожалуйста">
+            <label class="contest__label" for="user-email">Адрес почты</label>
+            <input class="contest__input" type="text" name="user-email" id="user-email" placeholder="Введите почту*" required>       
         </fieldset>
       </form>
     </main>
