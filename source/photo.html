@@ -96,6 +96,21 @@
         </blockquote>
         <p class="post__likes">Нравится: 2653</p>
       </section>
+      <form class="user-post" action="https://echo.htmlacademy.ru" method="post">
+        <h2 class="visually-hidden">Разместите свое фото</h2>
+        <p class="user-post__info">
+          Затмите их всех! Выкладывайте все, что накопилось в телефоне!
+        </p>
+        <label for="photo" class="visually-hidden"></label>
+        <input class="visually-hidden" type="file" name="photo" id="photo">
+        <img class="user-post__photo" scr="#" alt="Загруженное изображение">
+        <button class="user-post__process user-post__process--crop user-post__process--current" type="button">Кадрировать</button>
+        <button class="user-post__process user-post__process--fill" type="button">Заливка</button>
+        <button class="user-post__process user-post__process--contrast" type="button">Контрастность</button>
+        <div class="user-post__scale"></div>
+        <button class="user-post__button" type="submit">Запостить</button>
+        <button class="user-post__button user-post__button--disable" type="submit">Отмена</button>
+      </form>
     </main>
     <footer class="main-footer">
       <a class="main-footer__logo" href="#">
