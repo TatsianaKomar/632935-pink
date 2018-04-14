@@ -35,15 +35,18 @@
         </p>
         <fieldset class="contest__user">
           <legend class="visually-hidden">фио</legend>
+          <div class="contest__inner">
             <label class="contest__label" for="user-surname">Фамилия:</label>
             <input class="contest__input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию*" required>
             <label class="contest__label" for="user-name">Имя:</label>
             <input class="contest__input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя*" required>
             <label class="contest__label" for="user-patonymic">Отчество:</label>
             <input class="contest__input" type="text" name="user-name" id="user-patonymic" placeholder="Ну и отчество тоже">
+          </div>
         </fieldset>
         <fieldset class="contest__achivments">
           <legend class="contest__title">Ваши безбашенные достижения в путешествии</legend>
+          <div class="contest__inner">
             <input class="contest__input" type="checkbox" name="achive-checkbox-1" id="checkbox-1" checked>
             <label class="contest__label" for="checkbox-1">Сделал селфи с акулой</label>
             <input class="contest__input" type="checkbox" name="achive-checkbox-2" id="checkbox-2" checked>
@@ -55,28 +58,35 @@
             <input class="contest__input" type="checkbox" name="achive-checkbox-5" id="checkbox-5" checked>
             <label class="contest__label" for="checkbox-5">Удержал башню</label>
             <input class="contest__input" type="checkbox" name="achive-checkbox-6" id="checkbox-6">   
-            <label class="contest__label" for="checkbox-6">Разгромил отель</label>   
+            <label class="contest__label" for="checkbox-6">Разгромил отель</label>
+          </div>
         </fieldset>
         <fieldset class="contest__contacts">
           <legend class="visually-hidden">Ваши контакты</legend>
+          <div class="contest__inner">
             <label class="contest__label" for="user-tel">Номер телефона</label>
             <input class="contest__input" type="text" name="user-tel" id="user-tel" placeholder="Телефон, пожалуйста">
             <label class="contest__label" for="user-email">Адрес почты</label>
             <input class="contest__input" type="text" name="user-email" id="user-email" placeholder="Введите почту*" required>
+          </div>
         </fieldset>
         <fieldset class="contest__os">
           <legend class="contest__title">С каким приложением путешествовали?</legend>
+          <div class="contest__inner">
             <input class="contest__input" type="radio" name="os" id="os-ios" value="os-ios" checked>
             <label class="contest__label" for="os-ios">Pink для iOS</label>
             <input class="contest__input" type="radio" name="os" value="os-android" id="os-android">
             <label class="contest__label" for="os-android">Pink на Android</label>
-            <input class="contest__input" type="radio" name="os" value="os-win" id="os-win">   
-            <label class="contest__label" for="os-win">Windows phone</label> 
+            <input class="contest__input" type="radio" name="os" value="os-win" id="os-win">
+            <label class="contest__label" for="os-win">Windows phone</label>
+          </div>
         </fieldset>
         <fieldset class="contest__review">
           <legend class="contest__title">Опишите свои эмоции</legend>
+          <div class="contest__inner">
           <textarea placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>         
           </textarea>
+        </div>
         </fieldset>
         <button class="contest__button" type="submit">Отправить форму</button>
         <p class="contest__note">
