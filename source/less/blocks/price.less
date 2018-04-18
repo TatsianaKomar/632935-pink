@@ -1,0 +1,47 @@
+.price {
+  background-color: @light-gray;
+}
+
+.price__type {
+  background-color: @main-blue;
+}
+
+.price__marker {
+  position: relative;
+
+  &::before {
+    content:"";
+    display: block;
+    background-image: url("../img/bg-hit.svg");
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+  }
+}
+
+.price__option {
+  background-color: @white;
+  border: 2px solid @gray;
+  position: relative;
+
+  &--checked::after {
+    content:"";
+    display: block;
+    background-image: url("../img/icon-yes.svg");
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+  }
+
+  &--canceled::after {
+    content:"";
+    display: block;
+    background-image: url("../img/icon-no.svg");
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+  }
+}
