@@ -1,17 +1,17 @@
 .contacts {
-    background-image: url("../img/bg-map-mobile@1x.png");
-    background-repeat: no-repeat; 
-    position: relative;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat; 
+  position: relative;
 
-    &::after {
-    content:"";
-    display: block;
-    background-image: url("../img/icon-map-marker.svg");
-    background-repeat: no-repeat;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    }    
+  &::after {
+  content:"";
+  display: block;
+  background-image: url("../img/icon-map-marker.svg");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  }    
 }
 
 .contacts__info {
@@ -19,7 +19,7 @@
 }
 
 .contacts__list {
-  list-style: none;
+  .list();
   position: relative;
 
   &::after {
@@ -32,4 +32,25 @@
     height: 35px;
     position: absolute;
   }
+}
+
+.contacts__text {
+  .light();
+  font-size: 24px;
+}
+
+.contacts__title {
+  .bold();
+  font-size: 18px;
+}
+
+.contacts__value {
+  .light();
+  font-size: 24px;
+  color: @main-pink;
+}
+
+.contacts__link {
+  .link();
+  color: @main-pink;
 }
