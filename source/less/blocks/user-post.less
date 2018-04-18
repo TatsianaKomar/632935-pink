@@ -4,4 +4,44 @@
 
 .user-post__info {
   background-color: @white;
+  line-heigth: 30px;
+  font-size: 14px;
 }
+
+.user-post__process {
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  porition: relative;
+
+  &--crop::before {
+    content:"";
+    display: block;
+    background-image: url("../img/icon-editor-crop.svg");
+    background-repeat: no-repeat;
+    height: 44px;
+    width: 44px;
+    position: absolute;
+  }
+
+  &--fill::before {
+    content:"";
+    display: block;
+    background-image: url("../img/icon-editor-fill.svg");
+    background-repeat: no-repeat;
+    height: 43px;
+    width: 48px;
+    position: absolute;
+  }
+
+  &--contrast::before {
+    content:"";
+    display: block;
+    background-image: url("../img/icon-editor-contrast.svg");
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+  }
+}
+
