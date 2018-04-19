@@ -1,11 +1,21 @@
 .main-navigation__list {
   .list();
   color: @white;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-navigation__item {
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid @dark-gray;
+  border-bottom: 1px solid @black;
 }
 
 .main-navigation__link {
   .link();
   color: @white;
+
 }
 
 .main-navigation__toggle {
