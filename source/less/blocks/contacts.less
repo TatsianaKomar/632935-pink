@@ -2,7 +2,7 @@
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat; 
   position: relative;
-  .box();
+  padding-bottom: 200px;
 
   &::after {
   content:"";
@@ -16,23 +16,19 @@
 }
 
 .contacts__info {
-  background-color: @white;
+  background-color: @white;  
+  .box();
+  padding-top: 40px;
 }
 
 .contacts__list {
   .list();
-  position: relative;
+  padding-top: 25px;
+  padding-bottom: 25px;  
+}
 
-  &::after {
-    content:"";
-    display: block;
-    background-image: url("../img/bg-triangle-white-footer.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 320px;
-    height: 35px;
-    position: absolute;
-  }
+.contacts__item {
+  padding: 15px 0;
 }
 
 .contacts__text {
@@ -43,12 +39,15 @@
 .contacts__title {
   .bold();
   font-size: 18px;
+  margin: 0;
 }
 
 .contacts__value {
   .light();
   font-size: 24px;
   color: @main-pink;
+  margin: 0;
+  padding: 0;
 }
 
 .contacts__link {
