@@ -3,39 +3,44 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
-      <a class="logo">
-        <img class="logo__image" src="http://placehold.it" alt="Логотип мобильного приложения «Pink»">
-      </a>
+      <div class="main-header__inner">
+        <a class="logo" href="index.html">
+          <img class="logo__image" src="img/logo-pink-white-mobile.svg" alt="Логотип мобильного приложения «Pink»">
+        </a>
+      </div>
       <nav class="main-navigation">
         <button class="main-navigation__toggle" type="button">Открыть меню</button>
         <ul class="main-navigation__list">
-          <li class="main-navigation__item">
-            <a href="index.html">Главная</a>
-          </li>
           <li class="main-navigation__item main-navigation__item--current">
-            <a>Фотографии</a>
+            <a class="main-navigation__link" href="index.html">Главная</a>
           </li>
           <li class="main-navigation__item">
-            <a href="form.html">Конкурс</a>
+            <a class="main-navigation__link">Фотографии</a>
           </li>
           <li class="main-navigation__item">
-            <a href="htmlacademy.ru">HTML Academy</a>
+            <a class="main-navigation__link" href="form.html">Конкурс</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="htmlacademy.ru">HTML Academy</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main-page">
-      <h1 class="main-page__title">Фотографии пользователей</h1>
+      <div class="main-page__header">
+        <h1 class="main-page__title">Фотографии пользователей</h1>
+      </div>
       <p class="main-page__intro">
         Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
       </p>
       <section class="posts">
         <section class="posts__item posts__item--wide">
           <h2 class="visually-hidden">Пост с фото</h2>
-          <img class="posts__image" src="#" height="" width="" alt="Фото от Анны">
+          <img class="posts__image" src="img/panorama-mobile@1x.jpg" height="" width="" alt="Фото от Анны">
           <span class="posts__marker">Панорама дня</span>
           <cite class="posts__author">Анна<time class="posts__time">(5 минут назад)</time></cite>
           <blockquote class="posts__text">
@@ -45,7 +50,7 @@
         </section>
         <section class="posts__item">
           <h2 class="visually-hidden">Пост с фото</h2>
-          <img class="posts__image" src="#" height="" width="" alt="Фото от Левона">
+          <img class="posts__image" src="img/photo-car-mobile@1x.jpg" height="" width="" alt="Фото от Левона">
           <cite class="posts__author">Левон<time class="posts__time">(5 часов назад)</time></cite>
           <blockquote class="posts__text">
             Вчера он на луну летал, сегодня в руки к нам попал.
@@ -54,7 +59,7 @@
         </section>
         <section class="posts__item">
           <h2 class="visually-hidden">Пост с фото</h2>
-          <img class="posts__image" src="#" height="" width="" alt="Фото от Антона">
+          <img class="posts__image" src="img/photo-drumset-mobile@1x.jpg" height="" width="" alt="Фото от Антона">
           <cite class="posts__author">Антон<time class="posts__time">(12 часов назад)</time></cite>
           <blockquote class="posts__text">
             Cоседи будут рады!
@@ -63,7 +68,7 @@
         </section>
         <section class="posts__item">
           <h2 class="visually-hidden">Пост с фото</h2>
-          <img class="posts__image" src="#" height="" width="" alt="Фото от Бориса">
+          <img class="posts__image" src="img/photo-window-mobile@1x.jpg" height="" width="" alt="Фото от Бориса">
           <cite class="posts__author">Борис<time class="posts__time">(20 часов назад)</time></cite>
           <blockquote class="posts__text">
             Здесь могла быть ваша цитата о высоком и вечном.
@@ -72,7 +77,7 @@
         </section>
         <section class="posts__item">
           <h2 class="visually-hidden">Пост с фото</h2>
-          <img class="posts__image" src="#" height="" width="" alt="Фото от Сергея">
+          <img class="posts__image" src="img/photo-fair-mobile@1x.jpg" height="" width="" alt="Фото от Сергея">
           <cite class="posts__author">Сергей<time class="posts__time">(25 часов назад назад)</time></cite>
           <blockquote class="posts__text">
             Самая кубанская в мире!
@@ -81,7 +86,7 @@
         </section>
         <section class="posts__item">
           <h2 class="visually-hidden">Пост с фото</h2>
-          <img class="posts__image" src="#" height="" width="" alt="Фото от Максима">
+          <img class="posts__image" src="img/photo-pov-mobile@1x.jpg" height="" width="" alt="Фото от Максима">
           <cite class="posts__author">Максим<time class="posts__time">(40 часов назад)</time></cite>
           <blockquote class="posts__text">
             Где снег-то?
@@ -90,7 +95,7 @@
         </section>
         <section class="posts__item">
           <h2 class="visually-hidden">Пост с фото</h2>
-          <img class="posts__image" src="#" height="" width="" alt="Фото от Надежда">
+          <img class="posts__image" src="img/photo-wing-mobile@1x.jpg" height="" width="" alt="Фото от Надежда">
           <cite class="posts__author">Надежда<time class="posts__time">(45 часов назад)</time></cite>
           <blockquote class="posts__text">
             Всем GM и взаимные лайки!
@@ -105,18 +110,18 @@
         </p>
         <label for="photo" class="visually-hidden"></label>
         <input class="visually-hidden" type="file" name="photo" id="photo">
-        <img class="user-post__photo" scr="#" alt="Загруженное изображение">
+        <img class="user-post__photo" src="img/photo-road-mobile@1x.jpg" alt="Загруженное изображение">
         <button class="user-post__process user-post__process--crop user-post__process--current" type="button">Кадрировать</button>
         <button class="user-post__process user-post__process--fill" type="button">Заливка</button>
         <button class="user-post__process user-post__process--contrast" type="button">Контрастность</button>
         <div class="user-post__scale"></div>
         <button class="user-post__button" type="submit">Запостить</button>
-        <button class="user-post__button" type="reset">Отмена</button>
+        <button class="user-post__button user-post__button--reset" type="reset">Отмена</button>
       </form>
     </main>
     <footer class="main-footer">
       <a class="main-footer__logo" href="#">
-        <img class="main-footer__logo-image" src="#" alt="Логотип мобильного приложения «Pink»">
+        <img class="main-footer__logo-image" src="img/logo-pink-blue-mobile.svg" alt="Логотип мобильного приложения «Pink»">
       </a>
       <section class="main-footer__socials socials">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
@@ -135,7 +140,7 @@
       <section class="main-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="htmlacademy.ru">
-          <img class="copyright_logo" src="#" alt="Логотип компании «HTML-Academy»">
+          <img class="copyright_logo" src="img/logo-htmlacademy.svg" alt="Логотип компании «HTML-Academy»">
         </a>
       </section>
     </footer>
