@@ -1,6 +1,19 @@
 .main-page__header {
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    background-image: url("../img/iphone-hand-mobile@1x.png");
+    background-repeat: no-repeat;
+    height: 286px;
+    width: 256px;
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 .main-page__title {
