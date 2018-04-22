@@ -11,4 +11,15 @@
 .main-header__inner {
   .box();
   padding-top: 20px;
+  width: 320px;
+  .center();
+}
+
+@media(min-width: @desktop-width) {
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    background-opacity: 0.3;
+      z-index: 5;
+  }
 }
