@@ -9,7 +9,20 @@
 
 .downloads__inner {
   width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .center();
+}
+
+.downloads__text {
+  display: none;
+  .light();
+  font-size: 40px;
+  padding-bottom: 20px;
+  color: @white;
+  line-height: auto;
+  text-align: center;
 }
 
 .downloads__button {
@@ -42,6 +55,7 @@
   color: @white;
   padding: 0 25px;
   margin: 0;
+  text-align: center;
 }
 
 .downloads__link {
@@ -89,10 +103,15 @@
     margin: 0;
     margin-right: auto;
   }
+
+  .downloads__text {
+    display: block;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .downloads {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
