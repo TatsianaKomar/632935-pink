@@ -1,7 +1,8 @@
 .main-page__header {
+  background-color: @main-blue;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
   position: relative;
   z-index: -1;
 
@@ -27,7 +28,7 @@
   .light();
   font-size: 24px;
   color: @white;
-  padding: 35px 0 50px 0;
+  padding: 35px 20px 50px 20px;
   margin: 0;
   text-align: center;
 }
@@ -38,8 +39,14 @@
 
 @media (min-width: @tablet-width) {
   .main-page__header-inner {
-    max-width: 620px;
+    width: 620px;
     padding-top: 70px;
+  }
+
+  .main-page__title {
+    font-size: 50px;
+    line-height: 100%;
+    padding: 90px;
   }
 }
 
@@ -49,5 +56,11 @@
     .desktop-box();
     padding-top: 200px;
     margin-top: -110px;
+  }
+
+  .main-page__title {
+    font-size: 50px;
+    line-height: 100%;
+    padding: 70px 85px 100px 85px;
   }
 }
