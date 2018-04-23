@@ -1,6 +1,11 @@
 .price {
   background-color: @light-gray;
-  .box();
+  padding-top: 65px;
+  padding-bottom: 85px;
+}
+
+.price__inner {
+  .center();
 }
 
 .price__item {
@@ -96,4 +101,20 @@
 
 .price__list {
   display: flex;
+}
+
+@media (min-width: @tablet-width) {
+  .price__inner {
+    .box();
+    .center();
+    width: 620px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price__inner {
+    .desktop-box();
+    .center();
+    width: 940px;
+  }
 }
