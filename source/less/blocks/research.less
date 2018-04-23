@@ -5,17 +5,28 @@
 @media (min-width: @tablet-width) {
   .research {
     display: block;    
-    width: 620px;
-    padding: 55px 20px;
-    .center();
   }
 
   .research__inner {
     padding-left: 50%;
+    width: 310px;
+    padding: 55px 20px 55px 330px;
+    .center();
   }
 
   .research__link {
     color: @main-pink;
     text-decoration: underline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .research {
+    background-color: @light-gray;
+  }
+
+  .research__inner {
+    width: 570px;
+    padding: 120px 10px 120px 380px;
   }
 }
