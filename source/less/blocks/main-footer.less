@@ -1,5 +1,31 @@
 .main-footer {
+  width: 280px;
   .box();
   padding-top: 40px;
   padding-bottom: 40px;
+  .center();
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
+
+@media (min-width: @tablet-width) {
+  .main-footer {
+    width: 620px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-footer {
+    width: 940px;
+    .desktop-box();
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+  }
+}
+
