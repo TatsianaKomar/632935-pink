@@ -1,8 +1,9 @@
 .main-page__header {
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   position: relative;
+  z-index: -1;
 
   /*&::before {
     content: "";
@@ -13,7 +14,7 @@
     width: 257px;
     position: relative;
     top: 177px;
-  } 8*/  
+  } */  
 }
 
 .main-page__header-inner {
@@ -26,8 +27,9 @@
   .light();
   font-size: 24px;
   color: @white;
-  padding: 40px;
+  padding: 35px 0 50px 0;
   margin: 0;
+  text-align: center;
 }
 
 .main-page__intro {
@@ -35,24 +37,17 @@
 }
 
 @media (min-width: @tablet-width) {
-  .main-page__header {
-    min-height: 732px;
-  }
-
   .main-page__header-inner {
     max-width: 660px;
-    padding-top: 50px;
+    padding-top: 70px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .main-page__header {
-    min-height: 851px;
-  }
-
   .main-page__header-inner {
     max-width: 960px;
     .desktop-box();
-    padding-top: 50px;
+    padding-top: 200px;
+    margin-top: -110px;
   }
 }
