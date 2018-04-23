@@ -8,18 +8,19 @@
   text-transform: uppercase;
 }
 
-.main-header__inner {
-  .box();
-  padding-top: 20px;
-  width: 320px;
-  .center();
-}
-
 @media(min-width: @desktop-width) {
   .main-header {
     display: flex;
     justify-content: space-between;
-    background-opacity: 0.3;
-      z-index: 5;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .main-header__inner {
+    width: 960px;
+    .center();
+    .desktop-box();
+    display: flex;
+    justify-content: space-between;
   }
 }

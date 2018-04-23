@@ -1,6 +1,5 @@
 .main-navigation {
   position: relative;
-
 }
 
 .main-navigation__list {
@@ -19,6 +18,9 @@
 
 .main-navigation__link {
   color: @white;
+  display: block;
+  padding: 25px 20px;
+  text-align: center;
 }
 
 .main-navigation__toggle {
@@ -54,21 +56,24 @@
   .main-navigation {
     display: flex;
     flex-direction: row;
-    width: 660px;
-    margin-bottom: -66px;
-    width: 620px;
   }
+
   .main-navigation__toggle {
     display: none;
   }
 
-  .main-navigation__item {
-    display: block;
-    border: none;
-  }
-
   .main-navigation__list {
+    width: 620px;
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .main-navigation__item {
+    border: none;
+  }
+
+  .main-navigation__link {
+    padding: 39px 0;
+  }
 }
+
