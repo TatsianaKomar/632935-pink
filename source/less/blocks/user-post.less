@@ -3,11 +3,11 @@
 }
 
 .user-post__inner {
-  .box();
+  padding: 0 20px;
   width: 280px;
   display: flex;
   flex-direction: column;
-  .center();
+  margin: 0 auto;
 }
 
 .user-post__options {
@@ -30,8 +30,8 @@
   line-height: 30px;
   font-size: 14px;
   text-align: center;
-  .center();
-  width: 280px;
+  padding: 0;
+  margin: 0;
 }
 
 .user-post__process {
@@ -87,32 +87,34 @@
     width: 620px;
     display: flex;
     flex-direction: row;
-    .center();
+    justify-content: space-between;
+    margin: 0 auto;
   }
 
   .user-post__process-wrapper {
     flex-direction: column;
-  }
-
-  .user-post__info {
-    width: 430px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .user-post {
     width: 940px;
-    .center();
-    .desktop-box();
+    margin: 0 auto;
   }
 
   .user-post__inner {
-    width: 940px;
+    width: 820px;
+    padding: 0 10px;
     display: flex;
     flex-direction: row;
   }
 
-  .user-post__button-wrappe {
+  .user-post__button-wrapper {
     flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .user-post__info {
+    font-size: 18px;
   }
 }
