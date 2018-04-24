@@ -5,11 +5,11 @@
 .advantages__inner {
   .center();
   .box();
-  min-width: 280px; 
+  min-width: 280px;
   background-color: @light-gray;
 }
 
-.advantages__list {  
+.advantages__list {
   display: flex;
   flex-direction: column;
   .list();
@@ -75,6 +75,7 @@
 @media (min-width: @desktop-width) {
   .advantages__inner {
     .desktop-box();
+    min-width: 960px;
   }
 
   .advantages__list {
@@ -103,9 +104,5 @@
     &--smile::after {
       display: none;
     }
-  }
-
-  .advantages__inner {
-    min-width: 960px;
   }
 }
