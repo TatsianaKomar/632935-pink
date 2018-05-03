@@ -2,3 +2,62 @@
   .list();
   display: flex;
 }
+
+.socials__item {
+  padding-right: 14px;
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.socials__link {
+  display: block;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;  
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3px @border-gray;
+  
+  &--tw {
+    content: "";
+    background-image: url("../img/icon-twitter.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &--fb {  
+    content: "";
+    display: block;
+    background-image: url("../img/icon-facebook.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &--yt { 
+    content: "";
+    display: block;
+    background-image: url("../img/icon-youtube.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 0 3px @main-blue;
+  }
+
+  &:active {
+    box-shadow: inset 0 0 0 3px @trans-gray;    
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .socials__item {
+    padding-right: 7px;
+    padding-left: 5px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
