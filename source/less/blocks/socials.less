@@ -1,6 +1,8 @@
 .socials__list {
   .list();
   display: flex;
+  padding-top: 37px;
+  padding-bottom: 27px;
 }
 
 .socials__item {
@@ -51,13 +53,26 @@
   }
 }
 
+@media (min-width: 660px) {
+  .socials__list {
+    padding: 0;
+  }
+
+  .socials__item {
+    &:last-child {
+      padding-right: 14px;
+    }
+  }
+}
+
 @media (min-width: @desktop-width) {
   .socials__item {
-    padding-right: 7px;
-    padding-left: 5px;
+    padding-right: 0px;
+    padding-left: 14px;
 
     &:last-child {
-      padding-right: 0;
+      padding-right: 0px;
+      padding-left: 14px;
     }
   }
 }
