@@ -3,11 +3,9 @@
 }
 
 .user-post__inner {
-  padding: 0 20px;
-  width: 280px;
+  .center();
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   padding-top: 20px;
 }
 
@@ -117,8 +115,8 @@
 
 @media (min-width: @tablet-width) {
   .user-post__inner {
+    .center-tab();
     padding-top: 57px;
-    width: 620px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -147,8 +145,8 @@
 
 @media (min-width: @desktop-width) {
   .user-post {
-    width: 940px;
-    margin: 0 auto;
+    .center-desk();
+    padding: 0;
   }
 
   .user-post__inner {

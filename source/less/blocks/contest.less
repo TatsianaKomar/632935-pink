@@ -40,9 +40,7 @@
 .contest__input-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
-  width: 280px;
-  margin: 0 auto;
+  .center();
   padding-bottom: 20px;
 }
 
@@ -234,9 +232,7 @@
 
 @media (min-width: @tablet-width) {
   .contest__inner {
-    width: 620px;
-    padding: 0 20px;
-    margin: 0 auto;
+    .center-tab();
   }
 
   .contest__input-wrapper {
@@ -390,9 +386,7 @@
 @media (min-width: @desktop-width) {
 
   .contest__inner {
-    width: 940px;
-    margin: 0 auto;
-    padding: 0 10px;
+    .center-desk();
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;

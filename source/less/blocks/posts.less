@@ -1,9 +1,7 @@
 .posts__inner {
-  padding: 0 20px;
+  .center();
   display: flex;
   flex-direction: column;
-  width: 280px;
-  margin: 0 auto;
 }
 
 .posts__item {
@@ -20,8 +18,7 @@
 
 .posts__comment {
   background-color: @light-gray;
-  width: 280px;
-  margin: 0 auto;
+  .center();
   padding-top: 16px;
 }
 
@@ -105,7 +102,7 @@
 
 @media (min-width: @tablet-width) {
   .posts__inner {
-    width: 620px;
+    .center-tab();
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -137,7 +134,7 @@
   }
 
   .posts__comment {
-    width: 620px;
+    .center-tab();
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -206,8 +203,7 @@
 
 @media (min-width: @desktop-width) {
   .posts__inner {
-    padding: 0 10px;
-    width: 940px;
+    .center-desk();
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -216,7 +212,7 @@
   }
 
   .posts__comment {
-    width: 940px;
+    .center-desk();
   }
 
   .posts__marker {
