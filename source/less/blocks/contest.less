@@ -10,13 +10,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 15px;
 }
 
 .contest__description {
   text-align: center;
   padding: 0 20px;
   padding-top: 45px;
-  padding-bottom: 20px;
+  padding-bottom: 16px;
   width: 280px;
   font-size: 14px;
   line-height: 30px;
@@ -29,37 +30,97 @@
   padding: 0 20px;
   width: 280px;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .contest__user {
   .contest__label {
-  padding: 14px 31px 5px 20px;
+  padding: 18px 20px 5px 22px;
   }
 }
 
 .contest__achivments {
   background-color: @light-gray;
+  width: 100%;
+  
+  .contest__input-wrapper {
+    margin-top: 74px;
+  }
 
+  .contest__title {
+    position: relative;
+    top: 55px;
+    padding: 0 50px;
+    padding-top: 5px;
+  }
+  
   .contest__label {
     color: @main-blue;
     line-height: 30px;
+    font-size: 18px;
     text-transform: none;
+    /*Временно*/
+    padding: 10px 0 10px 70px;
+    margin: 16px 0;
   }
 }
 
 .contest__contacts {
+  .contest__input-wrapper {
+    padding-top: 14px;
+  }
   .contest__title {
     display: none;
+  }
+
+  .contest__label {
+    padding: 18px 20px 5px 22px;
   }
 }
 
 .contest__os {
   background-color: @light-gray;
+  width: 100%;
+
+  .contest__input-wrapper {
+    margin-top: 74px;
+  }
+
+  .contest__title {
+    position: relative;
+    top: 55px;
+    padding: 0 50px;
+    padding-top: 5px;
+  }
 
   .contest__label {
-    color: @main-blue;
+    color: #283645;
     line-height: 30px;
+    font-size: 18px;
     text-transform: none;
+    /*Временно*/
+    padding: 10px 0 10px 70px;
+    margin: 10px 0 15px 0;
+  }
+}
+
+.contest__review {
+  .contest__input-wrapper {
+    margin-top: 57px;
+    margin-bottom: 27px;
+  }
+  .contest__title {
+    position: relative;
+    top: 40px;
+  }
+
+  .contest__input {
+    font-size: 18px;
+    line-height: 30px;
+
+    min-height: 184px;
+    resize: none;
+    padding: 14px 20px 0 20px;
   }
 }
 
@@ -72,11 +133,27 @@
 }
 
 .contest__button {
+  .bold();
   background-color: @green-btn;
   color: @white;
   border: none;
-  border-radius: 2px;
+  border-radius: 3px;
   text-transform: uppercase;
+  padding: 22px 47px;
+
+  &:hover {
+    background-color: @green-btn-h;
+  }    
+
+  &:active {
+    background-color: @green-btn-h;
+    color: @trans-white;
+  }
+
+  &:disabled {
+    background-color: @gray;
+    color: @white;
+  }
 }
 
 .contest__label {
@@ -90,8 +167,22 @@
   .normal();
   color: @main-blue;
   border: 2px solid @gray;
-  padding: 21px 24px;
+  padding: 20px 0 18px 21px;
   border-radius: 2px;
+
+  &::-webkit-input-placeholder {
+    color: #283645;
+  }
+
+  &:hover {
+    border-color: @main-blue;  
+  }
+
+  &:active,
+  &:focus {
+    border-color: @main-pink;
+    outline: none;
+  }
 }
 
 .contest__title {
@@ -106,6 +197,8 @@
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
+  margin: 0;
+  padding-top: 35px;
 
   sup {
     color: @main-pink;
