@@ -56,11 +56,20 @@
   color: @main-pink;
   margin: 0;
   padding: 0;
-  padding-bottom: 25px;
 }
 
 .contacts__link {
   color: @main-pink;
+  
+  &--mail {
+    &:hover {
+      color: @main-blue;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
