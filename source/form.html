@@ -37,12 +37,14 @@
       </div>
       <form class="contest" action="https://echo.htmlacademy.ru" method="post">
         <div class="contest__inner">
-          <p class="contest__description">
-            Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
-          </p>
-          <p class="contest__description">
-            Пожалуйста, заполните форму ниже:
-          </p>
+          <div  class="contest__description">
+            <p class="contest__text contest__text--main">
+              Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+            </p>
+            <p class="contest__text contest__text--add">
+              Пожалуйста, заполните форму ниже:
+            </p>
+          </div>
           <fieldset class="contest__user">
             <legend class="visually-hidden">фио</legend>
             <div class="contest__input-wrapper">
@@ -111,7 +113,7 @@
           <div class="contest__footer">
             <button class="contest__button" type="submit">Отправить форму</button>
             <p class="contest__note">
-                <sup>*</sup> — Обязательные поля
+                <sup>*</sup> — Обязательные <span>для заполнения</span> поля
             </p>
           </div>
           <section class="contest__modal visually-hidden">

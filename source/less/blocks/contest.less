@@ -17,15 +17,17 @@
 
 .contest__description {
   text-align: center;
-  padding: 0 20px;
   padding-top: 45px;
   padding-bottom: 16px;
-  width: 280px;
   font-size: 14px;
   line-height: 30px;
-  margin: 0 auto;
+  padding: 45px 20px 15px 20px;
+}
 
-  &:nth-child(2) {
+.contest__text {
+  margin: 0;
+  padding: 0;
+  &--add {
     display: none;
   }
 }
@@ -128,7 +130,6 @@
   .contest__input {
     font-size: 18px;
     line-height: 30px;
-
     min-height: 184px;
     resize: none;
     padding: 14px 20px 0 20px;
@@ -220,6 +221,10 @@
   sup {
     color: @main-pink;
   }
+
+  span {
+    display: none;
+  }
 }
 
 .contest__modal-title {
@@ -242,15 +247,12 @@
   .contest__description {
     font-size: 18px;
     line-height: 30px;
-    width: 490px;
+    padding: 92px 50px 44px 50px;
+  }
 
-    &:nth-child(1) {
-    padding: 92px 50px 0 50px;
-    }
-
-    &:nth-child(2) {
+  .contest__text {
+    &--add {
       display: block;
-      padding: 0 50px 44px 50px;
     }
   }
 
@@ -362,7 +364,7 @@
     }
 
     .contest__input {
-      margin: 0 60px;
+      margin: 0 58px;
       min-height: 174px;
     }
   }
@@ -386,6 +388,7 @@
 }
 
 @media (min-width: @desktop-width) {
+
   .contest__inner {
     width: 940px;
     margin: 0 auto;
@@ -401,56 +404,99 @@
   }
 
   .contest__description {
-    width: 820px;
-    padding: 100px 60px 70px 60px;
+    padding: 92px 68px 40px 68px;
+  }
+
+  .contest__text {
+    display: inline;
   }
 
   .contest__user {
-    width: 450px;
+    width: 435px;
     order: 1;
-    /*Временно для сетки*/
-    height: 340px;
+    
+    .contest__input-wrapper {
+      padding-top: 13px;
+    }
+      
+    .contest__input {
+      margin: 26px 0 27px 0;
+    }
   }
 
   .contest__os {
-    width: 450px;
-    /*Временно для сетки*/
-    height: 340px;
+    width: 431px;
+    
+    .contest__label {
+      padding-left: 83px;
+    }
   }
 
   .contest__contacts {
-    width: 100%;
-    /*Временно для сетки*/
-    height: 176px;
-  }
+    padding: 20px 60px 0 60px;
 
-  .contest__contacts .contest__input-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    .contest__input-wrapper {
+      width: 820px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    .contest__item {
+      width: 375px;
+    } 
+
+    .contest__input {
+      padding: 18px 0 20px 18px;
+      margin: 0;
+    }
+
+    .contest__label {
+      padding: 10px 0 12px 18px;
+    }
   }
 
   .contest__achivments {
     width: 100%;
-  }
+    margin-top: 30px;
+    padding: 23px 58px 18px 58px;
 
-  .contest__achivments .contest__input-wrapper {
-    display: flex;
-    flex-direction: column;
-    /*Временно для сетки*/
-    height: 300px;
-    flex-wrap: wrap;
-  }
-
-  .contest__achivments .contest__label {
-    /*Временно для сетки*/
-    display: block;
-    height: 135px;
+    .contest__input-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 180px;
+      flex-wrap: wrap;
+      align-content: space-between;
+      padding: 0;
+      margin: 0;
+    }
+    .contest__label {
+      margin-left: 0;
+      padding: 10px 0 10px 60px;
+    }
   }
 
   .contest__review {
     width: 100%;
-    /*Временно для сетки*/
-    height: 280px;
+
+    .contest__input {
+      min-height: 96px;
+      padding: 14px 20px;
+    }
+
+    .contest__input-wrapper {
+      margin: 35px 0 43px 0;
+    } 
+  }
+
+  .contest__footer {
+    width: 940px;
+    padding: 37px 0 0 0;
+  }
+
+  .contest__note {
+    span {
+      display: inline;
+    }
   }
 }
