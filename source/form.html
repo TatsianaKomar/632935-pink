@@ -40,15 +40,24 @@
           <p class="contest__description">
             Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
           </p>
+          <p class="contest__description">
+            Пожалуйста, заполните форму ниже:
+          </p>
           <fieldset class="contest__user">
             <legend class="visually-hidden">фио</legend>
             <div class="contest__input-wrapper">
-              <label class="contest__label" for="user-surname">Фамилия:</label>
-              <input class="contest__input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию *" required>
-              <label class="contest__label" for="user-name">Имя:</label>
-              <input class="contest__input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя *" required>
-              <label class="contest__label" for="user-patonymic">Отчество:</label>
-              <input class="contest__input" type="text" name="user-name" id="user-patonymic" placeholder="Ну и отчество тоже">
+              <div class="contest__item">
+                <label class="contest__label" for="user-surname">Фамилия:</label>
+                <input class="contest__input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию *" required>
+              </div>
+              <div class="contest__item">
+                <label class="contest__label" for="user-name">Имя:</label>
+                <input class="contest__input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя *" required>
+              </div>
+              <div class="contest__item">
+                <label class="contest__label" for="user-patonymic">Отчество:</label>
+                <input class="contest__input" type="text" name="user-name" id="user-patonymic" placeholder="Ну и отчество тоже">
+              </div>
             </div>
           </fieldset>
           <fieldset class="contest__achivments">
@@ -71,10 +80,14 @@
           <fieldset class="contest__contacts">
             <legend class="contest__title">Контактная информация</legend>
             <div class="contest__input-wrapper">
-              <label class="contest__label" for="user-tel">Номер телефона</label>
-              <input class="contest__input" type="tel" name="user-tel" id="user-tel" placeholder="Номер, пожалуйста">
-              <label class="contest__label" for="user-email">Адрес почты</label>
-              <input class="contest__input" type="email" name="user-email" id="user-email" placeholder="Введите почту *" required>
+              <div class="contest__item">
+                <label class="contest__label" for="user-tel">Номер телефона</label>
+                <input class="contest__input" type="tel" name="user-tel" id="user-tel" placeholder="Номер, пожалуйста">
+              </div>
+              <div class="contest__item">
+                <label class="contest__label" for="user-email">Адрес почты</label>
+                <input class="contest__input" type="email" name="user-email" id="user-email" placeholder="Введите почту *" required>
+              </div>
             </div>
           </fieldset>
           <fieldset class="contest__os">
@@ -95,10 +108,12 @@
             </textarea>
             </div>
           </fieldset>
-          <button class="contest__button" type="submit">Отправить форму</button>
-          <p class="contest__note">
-              <sup>*</sup> — Обязательные поля
-          </p>
+          <div class="contest__footer">
+            <button class="contest__button" type="submit">Отправить форму</button>
+            <p class="contest__note">
+                <sup>*</sup> — Обязательные поля
+            </p>
+          </div>
           <section class="contest__modal visually-hidden">
             <div class="contest__modal-wrapper">
               <h3 class="contest__modal-title">Ваша заявка отправлена</h3>
