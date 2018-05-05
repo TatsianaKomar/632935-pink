@@ -3,7 +3,7 @@
 .contest__achivments,
 .contest__review,
 .contest__contacts {
-  border: 0px solid transparent;
+  border: 0 solid transparent;
   padding: 0;
   margin: 0;
 }
@@ -17,8 +17,6 @@
 
 .contest__description {
   text-align: center;
-  padding-top: 45px;
-  padding-bottom: 16px;
   font-size: 14px;
   line-height: 30px;
   padding: 45px 20px 15px 20px;
@@ -27,6 +25,7 @@
 .contest__text {
   margin: 0;
   padding: 0;
+  
   &--add {
     display: none;
   }
@@ -46,7 +45,7 @@
 
 .contest__user {
   .contest__label {
-  padding: 18px 20px 5px 22px;
+    padding: 18px 20px 5px 22px;
   }
 }
 
@@ -80,6 +79,7 @@
   .contest__input-wrapper {
     padding-top: 14px;
   }
+  
   .contest__title {
     display: none;
   }
@@ -120,6 +120,7 @@
     margin-top: 57px;
     margin-bottom: 27px;
   }
+  
   .contest__title {
     position: relative;
     top: 40px;
@@ -314,7 +315,7 @@
 
     .contest__input {
       align-self: stretch;
-      margin: 0px 60px;
+      margin: 0 60px;
     }
 
     .contest__label {
@@ -384,7 +385,6 @@
 }
 
 @media (min-width: @desktop-width) {
-
   .contest__inner {
     .center-desk();
     flex-direction: row;
@@ -464,6 +464,7 @@
       padding: 0;
       margin: 0;
     }
+    
     .contest__label {
       margin-left: 0;
       padding: 10px 0 10px 60px;
