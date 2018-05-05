@@ -85,13 +85,33 @@
   line-height: 18px;
   padding: 19px;
   border: none;
-  box-shadow: inset 0 0 0 3px #d22856;
+  box-shadow: inset 0 0 0 3px @main-pink;
   border-radius: 35px;
   margin-bottom: 12px;
 
+  &:hover {
+    background-color: @main-pink;
+    color: @white;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &--reset {
-    color: #dddfe0;
-    box-shadow: inset 0 0 0 3px #dddfe0;
+    color: @gray-btn;
+    box-shadow: inset 0 0 0 3px @gray-btn;
+
+    &:hover {
+      background-color: transparent;
+      box-shadow: inset 0 0 0 3px @gray-btn-h;
+      color: @gray-btn-h;
+    }
+
+    &:active {
+      background-color: @gray-btn-h;
+      color: @trans-white;
+    }
   }
 }
 
