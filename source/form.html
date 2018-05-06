@@ -15,14 +15,14 @@
         <nav class="main-navigation main-navigation--opened main-navigation--nojs">
           <button class="main-navigation__toggle" type="button">Открыть меню</button>
           <ul class="main-navigation__list">
-            <li class="main-navigation__item main-navigation__item--current">
+            <li class="main-navigation__item">
               <a class="main-navigation__link" href="index.html">Главная</a>
             </li>
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="photo.html">Фотографии</a>
             </li>
             <li class="main-navigation__item">
-              <a class="main-navigation__link">Конкурс</a>
+              <a class="main-navigation__link main-navigation__link--current">Конкурс</a>
             </li>
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="htmlacademy.ru">HTML Academy</a>
@@ -36,56 +36,71 @@
         <h1 class="main-page__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </div>
       <form class="contest" action="https://echo.htmlacademy.ru" method="post">
-        <div class="contest__inner">
-          <p class="contest__description">
-            Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните
-          </p>
+        <div class="contest__inner center">
+          <div  class="contest__description">
+            <p class="contest__text contest__text--main">
+              Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+            </p>
+            <p class="contest__text contest__text--add">
+              Пожалуйста, заполните форму ниже:
+            </p>
+          </div>
           <fieldset class="contest__user">
             <legend class="visually-hidden">фио</legend>
             <div class="contest__input-wrapper">
-              <label class="contest__label" for="user-surname">Фамилия:</label>
-              <input class="contest__input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию*" required>
-              <label class="contest__label" for="user-name">Имя:</label>
-              <input class="contest__input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя*" required>
-              <label class="contest__label" for="user-patonymic">Отчество:</label>
-              <input class="contest__input" type="text" name="user-name" id="user-patonymic" placeholder="Ну и отчество тоже">
+              <div class="contest__item">
+                <label class="contest__label" for="user-surname">Фамилия:</label>
+                <input class="contest__input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию *" required>
+              </div>
+              <div class="contest__item">
+                <label class="contest__label" for="user-name">Имя:</label>
+                <input class="contest__input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя *" required>
+              </div>
+              <div class="contest__item">
+                <label class="contest__label" for="user-patonymic">Отчество:</label>
+                <input class="contest__input" type="text" name="user-name" id="user-patonymic" placeholder="Ну и отчество тоже">
+              </div>
             </div>
           </fieldset>
           <fieldset class="contest__achivments">
             <legend class="contest__title">Ваши безбашенные достижения в путешествии</legend>
             <div class="contest__input-wrapper">
-              <input class="contest__input" type="checkbox" name="shark" id="shark" checked>
+              <input class="contest__input visually-hidden" type="checkbox" name="shark" id="shark" checked>
               <label class="contest__label" for="shark">Сделал селфи с акулой</label>
-              <input class="contest__input" type="checkbox" name="coal" id="coal" checked>
+              <input class="contest__input visually-hidden" type="checkbox" name="coal" id="coal" checked>
               <label class="contest__label" for="coal">Обгорел на пляже</label>
-              <input class="contest__input" type="checkbox" name="Norris" id="Norris">
+              <input class="contest__input visually-hidden" type="checkbox" name="Norris" id="Norris">
               <label class="contest__label" for="Norris">Видел Чака Норриса</label>
-              <input class="contest__input" type="checkbox" name="suveniers" id="suveniers">
+              <input class="contest__input visually-hidden" type="checkbox" name="suveniers" id="suveniers">
               <label class="contest__label" for="suveniers">Накупил сувениров</label>
-              <input class="contest__input" type="checkbox" name="tower" id="tower" checked>
+              <input class="contest__input visually-hidden" type="checkbox" name="tower" id="tower" checked>
               <label class="contest__label" for="tower">Удержал башню</label>
-              <input class="contest__input" type="checkbox" name="hotel" id="hotel">
+              <input class="contest__input visually-hidden" type="checkbox" name="hotel" id="hotel">
               <label class="contest__label" for="hotel">Разгромил отель</label>
             </div>
           </fieldset>
           <fieldset class="contest__contacts">
             <legend class="contest__title">Контактная информация</legend>
             <div class="contest__input-wrapper">
-              <label class="contest__label" for="user-tel">Номер телефона</label>
-              <input class="contest__input" type="tel" name="user-tel" id="user-tel" placeholder="Телефон, пожалуйста">
-              <label class="contest__label" for="user-email">Адрес почты</label>
-              <input class="contest__input" type="email" name="user-email" id="user-email" placeholder="Введите почту*" required>
+              <div class="contest__item">
+                <label class="contest__label" for="user-tel">Номер телефона</label>
+                <input class="contest__input" type="tel" name="user-tel" id="user-tel" placeholder="Номер, пожалуйста">
+              </div>
+              <div class="contest__item">
+                <label class="contest__label" for="user-email">Адрес почты</label>
+                <input class="contest__input" type="email" name="user-email" id="user-email" placeholder="Введите почту *" required>
+              </div>
             </div>
           </fieldset>
           <fieldset class="contest__os">
             <legend class="contest__title">С каким приложением путешествовали?</legend>
             <div class="contest__input-wrapper">
-              <input class="contest__input" type="radio" name="os" id="os-ios" value="os-ios"checked>
+              <input class="contest__input visually-hidden" type="radio" name="os" id="os-ios" value="os-ios" checked>
               <label class="contest__label" for="os-ios">Pink для iOS</label>
-              <input class="contest__input" type="radio" name="os" value="os-android" id="os-android">
+              <input class="contest__input visually-hidden" type="radio" name="os" value="os-android" id="os-android">
               <label class="contest__label" for="os-android">Pink на Android</label>
-              <input class="contest__input" type="radio" name="os" value="os-win" id="os-win">
-              <label class="contest__label" for="os-win">Windows phone</label>
+              <input class="contest__input visually-hidden" type="radio" name="os" value="os-win" id="os-win">
+              <label class="contest__label" for="os-win">Windows Phone</label>
             </div>
           </fieldset>
           <fieldset class="contest__review">
@@ -95,10 +110,12 @@
             </textarea>
             </div>
           </fieldset>
-          <button class="contest__button" type="submit">Отправить форму</button>
-          <p class="contest__note">
-              <sup>*</sup> — Обязательные поля
-          </p>
+          <div class="contest__footer">
+            <button class="contest__button" type="submit">Отправить форму</button>
+            <p class="contest__note">
+                <sup>*</sup> — Обязательные <span>для заполнения</span> поля
+            </p>
+          </div>
           <section class="contest__modal visually-hidden">
             <div class="contest__modal-wrapper">
               <h3 class="contest__modal-title">Ваша заявка отправлена</h3>
@@ -116,28 +133,28 @@
         </div>
       </form>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer center">
       <a class="main-footer__logo" href="#">
-        <img class="main-footer__logo-image" src="img/logo-pink-blue-mobile.svg" alt="Логотип мобильного приложения «Pink»">
+        <img class="main-footer__logo-image" src="img/logo-pink-blue-mobile.svg" alt="Логотип мобильного приложения «Pink»" height="80">
       </a>
       <section class="main-footer__socials socials">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <ul class="socials__list">
-          <li class="socials__item socials__item--tw">
-            <a href="#" class="socials__link">Twitter</a>
+          <li class="socials__item">
+            <a href="#" class="socials__link socials__link--tw"><span class="visually-hidden"> Twitter</span></a>
           </li>
-          <li class="socials__item socials__item--fb">
-            <a href="#" class="socials__link">Facebook</a>
+          <li class="socials__item">
+            <a href="#" class="socials__link socials__link--fb"><span class="visually-hidden">Facebook</span></a>
           </li>
-          <li class="socials__item socials__item--ut">
-            <a href="#" class="socials__link">YouTube</a>
+          <li class="socials__item">
+            <a href="#" class="socials__link socials__link--yt"><span class="visually-hidden">YouTube</span></a>
           </li>
         </ul>
       </section>
       <section class="main-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="htmlacademy.ru">
-          <img class="copyright_logo" src="img/logo-htmlacademy.svg" alt="Логотип компании «HTML-Academy»">
+          <img class="copyright_logo" src="img/logo-htmlacademy.svg" alt="Логотип компании «HTML-Academy»" height="34">
         </a>
       </section>
     </footer>

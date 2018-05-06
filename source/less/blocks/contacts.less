@@ -2,9 +2,8 @@
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
   position: relative;
+  /*Временно*/
   padding-bottom: 200px;
-  width: 280px;
-  margin: 0 auto;
 
   &::after {
     content: "";
@@ -19,82 +18,112 @@
 
 .contacts__info {
   background-color: @white;
-  padding: 0 20px;
-  padding-top: 40px;
+  padding-top: 44px;
   text-align: center;
 }
 
 .contacts__list {
   .list();
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 30px;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.contacts__item {
-  padding: 15px 0;
-}
-
 .contacts__text {
   .light();
   font-size: 24px;
+  line-height: 30px;
   display: block;
 }
 
 .contacts__title {
   .bold();
   font-size: 18px;
+  line-height: 24px;
   margin: 0;
+  padding: 0;
 }
 
 .contacts__value {
   .light();
   font-size: 24px;
+  line-height: 30px;
   color: @main-pink;
   margin: 0;
   padding: 0;
+  padding-bottom: 25px;
 }
 
 .contacts__link {
   color: @main-pink;
+
+  &--mail {
+    &:hover {
+      color: @main-blue;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
   .contacts {
-    width: 660px;
+    /*Временно*/
+    padding-bottom: 372px;
   }
 
   .contacts__list {
+    padding-top: 30px;
+    padding-bottom: 0;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .contacts__text {
+    font-size: 40px;
+    line-height: 48px;
   }
 
   .contacts__item {
-    width: 280px;
+    width: 300px;
+    padding: 15px 0 30px 0;
 
     &:nth-child(3) {
       flex-grow: 1;
     }
   }
+
+  .contacts__value {
+    padding: 5px 0 0 0;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .contacts {
-    width: 940px;
+    /*Временно*/
+    padding-bottom: 507px;
   }
 
   .contacts__info {
-    padding: 0 10px;
+    padding-top: 68px;
   }
 
   .contacts__list {
+    padding-top: 58px;
+    padding-bottom: 15px;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: flex-start;
   }
 
   .contacts__item {
+    padding: 0;
+
     &:nth-child(1) {
       order: 1;
     }
@@ -107,5 +136,14 @@
       order: 2;
       flex-grow: 0;
     }
+  }
+
+  .contacts__text {
+    font-size: 50px;
+    line-height: 58px;
+  }
+
+  .contacts__value {
+    padding: 23px 0 0 0;
   }
 }

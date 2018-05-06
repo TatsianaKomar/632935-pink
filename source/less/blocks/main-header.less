@@ -1,5 +1,7 @@
 .main-header {
   background-color: @main-blue;
+  position: relative;
+  z-index: 2;
 
   .bold();
   font-size: 18px;
@@ -10,17 +12,12 @@
   &--closed {
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.3);
-    margin-bottom: -70px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .main-header {
-    &--closed {
-      z-index: 10;
-      background-color: rgba(0, 0, 0, 0.3);
-      margin-bottom: -110px;
-    }
+    margin-bottom: -110px;
   }
 }
 
@@ -38,9 +35,7 @@
   }
 
   .main-header__inner {
-    width: 940px;
-    margin: 0 auto;
-    padding: 0 10px;
+    .center-desk();
     display: flex;
     justify-content: space-between;
   }

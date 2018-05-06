@@ -1,10 +1,11 @@
 .main-page__header {
+  min-height: 237px;
   background-color: @main-blue;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: auto;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 
   /*&::before {
     content: "";
@@ -19,50 +20,74 @@
 }
 
 .main-page__header-inner {
-  padding-top: 426px;
+  padding-top: 462px;
   margin: 0 auto;
 }
 
 .main-page__title {
   .light();
   font-size: 24px;
+  line-height: 30px;
   color: @white;
-  padding: 105px 20px 50px 20px;
+  padding: 95px 20px 0 20px;
   margin: 0;
   text-align: center;
 }
 
 .main-page__intro {
+  text-align: center;
+  margin: 0 auto;
+  width: 250px;
+  font-size: 14px;
   line-height: 30px;
+  padding: 45px 20px 49px 20px;
 }
 
 @media (min-width: @tablet-width) {
+  .main-page__header {
+    min-height: 440px;
+  }
+
   .main-page__header-inner {
     width: 620px;
-    padding-top: 70px;
+    padding: 110px 20px 0 20px;
   }
 
   .main-page__title {
     font-size: 50px;
-    line-height: 100%;
-    padding: 180px 90px 140px 90px;
+    line-height: 59px;
+    padding: 182px 90px 0 90px;
     text-align: center;
+  }
+
+  .main-page__intro {
+    font-size: 18px;
+    line-height: 30px;
+    width: 450px;
+    padding: 91px 0 76px 0;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .main-page__header {
+    min-height: 395px;
+  }
+
   .main-page__header-inner {
     width: 940px;
     padding: 0 10px;
-    padding-top: 310px;
+    padding-top: 110px;
     margin: 0 auto;
   }
 
   .main-page__title {
-    font-size: 50px;
-    line-height: 100%;
-    padding: 180px 85px 100px 85px;
+    padding: 176px 85px 0 85px;
     z-index: -1;
     margin-top: -110px;
+  }
+
+  .main-page__intro {
+    width: 575px;
+    padding-bottom: 89px;
   }
 }

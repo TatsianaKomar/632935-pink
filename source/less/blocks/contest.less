@@ -1,54 +1,136 @@
-.contest {
-  fieldset {
-    border: none;
-    padding: 0;
-    margin: 0;
-  }
+.contest__user,
+.contest__os,
+.contest__achivments,
+.contest__review,
+.contest__contacts {
+  border: 0 solid transparent;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 .contest__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 15px;
 }
 
 .contest__description {
   text-align: center;
-  padding: 50px 20px;
-  width: 280px;
+  font-size: 14px;
   line-height: 30px;
-  margin: 0 auto;
+  padding: 45px 0 15px 0;
+}
+
+.contest__text {
+  margin: 0;
+  padding: 0;
+
+  &--add {
+    display: none;
+  }
+}
+
+.contest__item {
+  display: flex;
+  flex-direction: column;
 }
 
 .contest__input-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
+  padding-bottom: 20px;
+}
+
+.contest__user {
+  .contest__label {
+    padding: 18px 20px 5px 22px;
+  }
 }
 
 .contest__achivments {
   background-color: @light-gray;
 
+  .contest__input-wrapper {
+    margin-top: 74px;
+  }
+
+  .contest__title {
+    position: relative;
+    top: 55px;
+    padding: 0 30px;
+    padding-top: 5px;
+  }
+
   .contest__label {
     color: @main-blue;
     line-height: 30px;
+    font-size: 18px;
     text-transform: none;
+    /*Временно*/
+    padding: 10px 0 10px 70px;
+    margin: 16px 0;
   }
 }
 
 .contest__contacts {
+  .contest__input-wrapper {
+    padding-top: 14px;
+  }
+
   .contest__title {
     display: none;
+  }
+
+  .contest__label {
+    padding: 18px 20px 5px 22px;
   }
 }
 
 .contest__os {
   background-color: @light-gray;
+  margin: 0 -20px;
+
+  .contest__input-wrapper {
+    margin-top: 74px;
+  }
+
+  .contest__title {
+    position: relative;
+    top: 55px;
+    padding: 0 50px;
+    padding-top: 5px;
+  }
 
   .contest__label {
-    color: @main-blue;
+    color: #283645;
     line-height: 30px;
+    font-size: 18px;
     text-transform: none;
+    /*Временно*/
+    padding: 10px 0 10px 70px;
+    margin: 10px 0 15px 0;
+  }
+}
+
+.contest__review {
+  .contest__input-wrapper {
+    margin-top: 57px;
+    margin-bottom: 27px;
+  }
+
+  .contest__title {
+    position: relative;
+    top: 40px;
+  }
+
+  .contest__input {
+    font-size: 18px;
+    line-height: 30px;
+    min-height: 184px;
+    resize: none;
+    padding: 14px 20px 0 20px;
   }
 }
 
@@ -58,14 +140,6 @@
 
 .contest__modal-wrapper {
   background-color: @white;
-}
-
-.contest__button {
-  background-color: @green-btn;
-  color: @white;
-  border: none;
-  border-radius: 2px;
-  text-transform: uppercase;
 }
 
 .contest__label {
@@ -79,7 +153,22 @@
   .normal();
   color: @main-blue;
   border: 2px solid @gray;
+  padding: 20px 0 18px 21px;
   border-radius: 2px;
+
+  &::-webkit-input-placeholder {
+    color: #283645;
+  }
+
+  &:hover {
+    border-color: @main-blue;
+  }
+
+  &:active,
+  &:focus {
+    border-color: @main-pink;
+    outline: none;
+  }
 }
 
 .contest__title {
@@ -90,13 +179,49 @@
   text-align: center;
 }
 
+.contest__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contest__button {
+  .bold();
+  background-color: @green-btn;
+  color: @white;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 22px 47px;
+
+  &:hover {
+    background-color: @green-btn-h;
+  }
+
+  &:active {
+    background-color: @green-btn-h;
+    color: @trans-white;
+  }
+
+  &:disabled {
+    background-color: @gray;
+    color: @white;
+  }
+}
+
 .contest__note {
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
+  margin: 0;
+  padding-top: 35px;
 
   sup {
     color: @main-pink;
+  }
+
+  span {
+    display: none;
   }
 }
 
@@ -106,55 +231,151 @@
 }
 
 @media (min-width: @tablet-width) {
-  .contest__input-wrapper {
-    width: 620px;
-  }
-
-  .contest__contacts .contest__title {
-    display: block;
-  }
-
   .contest__description {
-    width: 490px;
-    padding: 100px 70px 60px 70px;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 92px 50px 44px 50px;
+  }
+
+  .contest__text {
+    &--add {
+      display: block;
+    }
+  }
+
+  .contest__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contest__input {
+    flex-grow: 1;
+    margin: 26px 0 27px 0;
   }
 
   .contest__user {
     order: 1;
+
+    .contest__label {
+      padding: 14px 19px 10px 0;
+    }
   }
 
   .contest__os {
     background-color: @white;
     order: 2;
+    border: 2px solid @gray;
+    border-radius: 2px;
+    margin: 12px 0;
+    padding: 30px 0 12px 0;
+
+    .contest__input-wrapper {
+      margin-top: 0;
+    }
+
+    .contest__title {
+      position: static;
+      padding: 0 23px;
+    }
+
+    .contest__label {
+      margin-left: 50px;
+    }
   }
 
+
   .contest__contacts {
+    border: 2px solid @gray;
+    border-radius: 2px;
+    margin: 47px 0 27px 0;
+    padding: 0;
     order: 3;
+
+    .contest__title {
+      display: block;
+      padding: 0 30px;
+    }
+
+    .contest__item {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+
+    .contest__input {
+      align-self: stretch;
+      margin: 22px 60px 0 60px;
+    }
+
+    .contest__label {
+      padding: 12px 0 6px 80px;
+    }
   }
 
   .contest__achivments {
     background-color: @white;
     order: 4;
+    border: 2px solid @gray;
+    border-radius: 2px;
+    margin: 28px 0;
+    padding: 22px 0 8px 0;
+
+    .contest__input-wrapper {
+      margin-top: 0;
+    }
+
+    .contest__title {
+      position: static;
+      padding: 0 30px;
+    }
+
+    .contest__label {
+      margin-left: 50px;
+    }
   }
 
   .contest__review {
     order: 5;
+    border: 2px solid @gray;
+    border-radius: 2px;
+    margin: 28px 0;
+
+    .contest__title {
+      position: static;
+      padding: 0 35px;
+    }
+
+    .contest__input-wrapper {
+      margin: 37px 0 34px 0;
+    }
+
+    .contest__input {
+      margin: 0 58px;
+      min-height: 174px;
+    }
+  }
+
+  .contest__footer {
+    flex-direction: row;
+    justify-content: space-between;
+    order: 6;
+    width: 620px;
+    padding: 38px 0 34px 0;
+    align-items: center;
   }
 
   .contest__button {
-    order: 6;
+    padding: 22px 57px;
   }
 
   .contest__note {
-    order: 7;
+    padding-top: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .contest__inner {
-    width: 940px;
-    margin: 0 auto;
-    padding: 0 10px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -166,56 +387,100 @@
   }
 
   .contest__description {
-    width: 820px;
-    padding: 100px 60px 70px 60px;
+    padding: 92px 68px 30px 68px;
+  }
+
+  .contest__text {
+    display: inline;
   }
 
   .contest__user {
-    width: 450px;
+    width: 435px;
     order: 1;
-    /*Временно для сетки*/
-    height: 340px;
+
+    .contest__input-wrapper {
+      padding-top: 30px;
+    }
+
+    .contest__input {
+      margin: 26px 0 27px 0;
+    }
   }
 
   .contest__os {
-    width: 450px;
-    /*Временно для сетки*/
-    height: 340px;
+    width: 431px;
+
+    .contest__label {
+      padding-left: 83px;
+    }
   }
 
   .contest__contacts {
-    width: 100%;
-    /*Временно для сетки*/
-    height: 176px;
-  }
+    padding: 20px 60px 0 60px;
 
-  .contest__contacts .contest__input-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    .contest__input-wrapper {
+      width: 820px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .contest__item {
+      width: 375px;
+    }
+
+    .contest__input {
+      padding: 18px 0 20px 18px;
+      margin: 0;
+    }
+
+    .contest__label {
+      padding: 10px 0 12px 18px;
+    }
   }
 
   .contest__achivments {
     width: 100%;
-  }
+    margin-top: 30px;
+    padding: 23px 58px 18px 58px;
 
-  .contest__achivments .contest__input-wrapper {
-    display: flex;
-    flex-direction: column;
-    /*Временно для сетки*/
-    height: 300px;
-    flex-wrap: wrap;
-  }
+    .contest__input-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 180px;
+      flex-wrap: wrap;
+      align-content: space-between;
+      padding: 0;
+      margin: 0;
+    }
 
-  .contest__achivments .contest__label {
-    /*Временно для сетки*/
-    display: block;
-    height: 135px;
+    .contest__label {
+      margin-left: 0;
+      padding: 10px 0 10px 60px;
+    }
   }
 
   .contest__review {
     width: 100%;
-    /*Временно для сетки*/
-    height: 280px;
+
+    .contest__input {
+      min-height: 96px;
+      padding: 14px 20px;
+    }
+
+    .contest__input-wrapper {
+      margin: 35px 0 43px 0;
+    }
+  }
+
+  .contest__footer {
+    width: 940px;
+    padding: 37px 0 0 0;
+  }
+
+  .contest__note {
+    span {
+      display: inline;
+    }
   }
 }

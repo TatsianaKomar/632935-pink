@@ -5,15 +5,31 @@
 @media (min-width: @tablet-width) {
   .research {
     display: block;
+    padding-top: 60px;
   }
 
   .research__inner {
     width: 310px;
-    padding: 55px 20px 55px 330px;
+    padding: 40px 20px 55px 330px;
     margin: 0 auto;
   }
 
+  .research__title {
+    display: block;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .research__text {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+    padding: 9px 10px 9px 0;
+  }
+
   .research__link {
+    font-size: 14px;
+    line-height: 24px;
     color: @main-pink;
     text-decoration: underline;
   }
@@ -22,10 +38,32 @@
 @media (min-width: @desktop-width) {
   .research {
     background-color: @light-gray;
+    padding: 0;
+  }
+
+  .research br {
+    display: none;
   }
 
   .research__inner {
     width: 570px;
-    padding: 120px 10px 120px 380px;
+    padding: 120px 10px 115px 374px;
+  }
+
+  .research__title {
+    font-size: 30px;
+    line-height: 30px;
+    padding: 0;
+  }
+
+  .research__text {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 25px 48px 29px 0;
+  }
+
+  .research__link {
+    font-size: 18px;
+    line-height: 30px;
   }
 }
