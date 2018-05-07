@@ -3,7 +3,6 @@
 }
 
 .user-post__inner {
-  .center();
   display: flex;
   flex-direction: column;
   padding-top: 20px;
@@ -115,7 +114,6 @@
 
 @media (min-width: @tablet-width) {
   .user-post__inner {
-    .center-tab();
     padding-top: 57px;
     display: flex;
     flex-direction: row;
@@ -145,12 +143,12 @@
 
 @media (min-width: @desktop-width) {
   .user-post {
-    .center-desk();
     padding: 0;
+    width: @desktop-width;
+    margin: 0 auto;
   }
 
   .user-post__inner {
-    width: 800px;
     padding: 57px 60px 53px 80px;
     display: flex;
     flex-direction: row;
