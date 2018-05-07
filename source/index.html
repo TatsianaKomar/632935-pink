@@ -10,7 +10,11 @@
     <header class="main-header main-header--opened main-header--nojs">
       <div class="main-header__inner">
         <a class="logo">
-          <img class="logo__image" src="img/logo-pink-white-mobile.svg" alt="Логотип мобильного приложения «Pink»">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+            <img class="logo__image" src="img/logo-pink-white-mobile.svg" width="76" height="40" alt="Логотип мобильного приложения «Pink»">
+          </picture>
         </a>
         <nav class="main-navigation main-navigation--opened main-navigation--nojs">
           <button class="main-navigation__toggle" type="button">Открыть меню</button>
@@ -34,31 +38,29 @@
     <main class="main-page">
       <h1 class="visually-hidden">О приложении</h1>
       <div class="main-page__header">
-        <div class="main-page__header-inner">
+        <div class="main-page__header-inner main-page__header-inner--index center">
           <section class="downloads">
-            <div class="downloads__inner">
-              <h2 class="visually-hidden">Скачать приложение</h2>
-              <b class="downloads__text">Взгляните на жизнь иначе!</b>
-              <a href="#" class="downloads__button" >Скачать приложение</a>
-              <ul class="downloads__list">
-                <li class="downloads__item">
-                  <a href="#" class="downloads__link downloads__link--apple">
-                    Скачать для iOS
-                  </a>
-                </li>
-                <li class="downloads__item">
-                  <a href="#" class="downloads__link downloads__link--android">
-                    Скачать для Android
-                  </a>
-                </li>
-                <li class="downloads__item">
-                  <a href="#" class="downloads__link downloads__link--win">
-                    Скачать для Windows
-                  </a>
-                </li>
-              </ul>
-              <p class="downloads__access">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-            </div>
+            <h2 class="visually-hidden">Скачать приложение</h2>
+            <b class="downloads__text">Взгляните на жизнь иначе!</b>
+            <a href="#" class="downloads__button" >Скачать приложение</a>
+            <ul class="downloads__list">
+              <li class="downloads__item">
+                <a href="#" class="downloads__link downloads__link--apple">
+                  Скачать для iOS
+                </a>
+              </li>
+              <li class="downloads__item">
+                <a href="#" class="downloads__link downloads__link--android">
+                  Скачать для Android
+                </a>
+              </li>
+              <li class="downloads__item">
+                <a href="#" class="downloads__link downloads__link--win">
+                  Скачать для Windows
+                </a>
+              </li>
+            </ul>
+            <p class="downloads__access">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
           </section>
         </div>
       </div>
