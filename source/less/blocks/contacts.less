@@ -1,9 +1,24 @@
 .contacts {
-  background-image: url("../img/bg-map-mobile@1x.png");
+  background-image: url("../img/bg-map-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: 320px auto;
+  background-position: center top -33px;
+  min-height: 612px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+    background-size: 640px auto;
+  }
+}
+
+.contacts__inner {
+  background-color: @white; 
+}
+
+.contacts__info {
+  padding-top: 44px;
   position: relative;
-  /*Временно*/
-  padding-bottom: 200px;
+  text-align: center;
 
   &::after {
     content: "";
@@ -13,13 +28,9 @@
     width: 40px;
     height: 40px;
     position: absolute;
+    right: 140px;
+    bottom: -136px;
   }
-}
-
-.contacts__info {
-  background-color: @white;
-  padding-top: 44px;
-  text-align: center;
 }
 
 .contacts__list {
@@ -72,8 +83,22 @@
 
 @media (min-width: @tablet-width) {
   .contacts {
-    /*Временно*/
-    padding-bottom: 372px;
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+    background-size: 700px auto;
+    background-position: center top 60px;
+    min-height: 780px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.jpg");
+      background-size: 1400px auto;
+    }
+  }
+
+  .contacts__info {
+    &::after {
+      right: 308px;
+      bottom: -232px;
+    }
   }
 
   .contacts__list {
@@ -105,13 +130,24 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
-    /*Временно*/
-    padding-bottom: 507px;
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+    background-position: center top 90px;
+    background-size: 1200px auto;
+    min-height: 869px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
+      background-size: 2400px auto;
+    }
   }
 
   .contacts__info {
     padding-top: 68px;
-  }
+      &::after {
+        right: 458px;
+        bottom: -307px;              
+      }
+    }
 
   .contacts__list {
     padding-top: 58px;
