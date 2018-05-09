@@ -1,4 +1,5 @@
 .main-page__header {
+  min-height: 170px;
   padding-top: 66px;
   background-color: #283645;
   background-image: url("../img/bg-back-mobile@1x.jpg");
@@ -39,7 +40,7 @@
   font-size: 24px;
   line-height: 30px;
   color: @white;
-  padding: 30px 20px 80px 20px;
+  padding: 30px 20px 0 20px;
   margin: 0;
   text-align: center;
 }
@@ -55,6 +56,7 @@
 
 @media (min-width: @tablet-width) {
   .main-page__header {
+    min-height: 326px;
     padding-top: 110px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-size: 1200px auto;
@@ -87,7 +89,7 @@
   .main-page__title {
     font-size: 50px;
     line-height: 59px;
-    padding: 66px 90px 142px 90px;
+    padding: 66px 90px 0 90px;
     text-align: center;
   }
 
@@ -101,6 +103,7 @@
 
 @media (min-width: @desktop-width) {
   .main-page__header {
+    min-height: 283px;
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-size: 2560px auto;
     background-position: center top;
@@ -134,6 +137,6 @@
 
   .main-page__intro {
     width: 575px;
-    padding-bottom: 89px;
+    padding-bottom: 59px;
   }
 }
