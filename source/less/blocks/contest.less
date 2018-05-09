@@ -241,6 +241,7 @@
 
   .contest__text {
     display: inline;
+    
     &--add {
       display: inline;
     }
@@ -301,11 +302,6 @@
       padding: 0 30px;
     }
 
-    .contest__item {
-      flex-direction: column-reverse;
-      align-items: flex-start;
-    }
-
     .contest__input {
       align-self: stretch;
       margin: 22px 60px 0 60px;
@@ -317,6 +313,8 @@
   }
 
   .contest__contacts .contest__item {
+    flex-direction: column-reverse;
+    align-items: flex-start;
     position: relative;
 
     &::after {
@@ -332,6 +330,7 @@
 
     &--tel {
       position: relative;
+      
       &::after {
         content: "";
         display: block;
@@ -340,7 +339,7 @@
         right: 62px;
         width: 59px;
         height: 58px;
-        background-image: url(../img/icon-phone.svg);
+        background-image: url("../img/icon-phone.svg");
         background-repeat: no-repeat;
         background-position: 50% 50%;
       }
@@ -355,7 +354,7 @@
         right: 62px;
         width: 59px;
         height: 58px;
-        background-image: url(../img/icon-mail.svg);
+        background-image: url("../img/icon-mail.svg");
         background-repeat: no-repeat;
         background-position: 50% 50%;
       }
@@ -478,10 +477,6 @@
       justify-content: space-between;
     }
 
-    .contest__item {
-      width: 375px;
-    }
-
     .contest__input {
       padding: 18px 0 20px 18px;
       margin: 0;
@@ -493,7 +488,8 @@
   }
 
   .contest__contacts .contest__item {
-
+    width: 375px;
+   
     &::after {
       top: 2px;
       right: 2px;
@@ -501,6 +497,7 @@
 
     &--tel {
       position: relative;
+      
       &::after {
         top: 2px;
         right: 2px;
