@@ -15,6 +15,20 @@
   background-color: @white;
 }
 
+.posts__photo {
+  width: 280px;
+  height: auto;
+}
+
+.posts__image {
+  vertical-align: bottom;
+}
+
+.posts__photo--wide {
+  width: 320px;
+  margin: 0 -20px;
+}
+
 .posts__comment {
   background-color: @light-gray;
   padding: 16px 0 0 0;
@@ -28,7 +42,8 @@
   background-color: @main-pink;
   position: absolute;
   padding: 6px 20px;
-  right: 20px;
+  right: 0;
+  top: 0;
   text-transform: uppercase;
 }
 
@@ -45,7 +60,7 @@
   .light();
   font-size: 12px;
   text-transform: uppercase;
-  padding-left: 2px;
+  padding-left: 4px;
 }
 
 .posts__item--wide .posts__author {
@@ -57,7 +72,7 @@
   line-height: 24px;
   text-decoration: none;
   margin: 0;
-  padding: 0 20px 10px 18px;
+  padding: 0 0 10px 18px;
 }
 
 .posts__likes {
@@ -112,22 +127,22 @@
     min-height: 455px;
 
     &--wide {
-      width: 100%;
-      position: relative;
+      width: 660px;
+      margin: 0 -20px;
     }
   }
 
-  /*Временно*/
-  .posts__item img {
-    height: 300px;
-  }
-  /*Временно*/
-  .posts__item--wide img {
-    height: 510px;
+  .posts__photo {
+    width: 300px;
+
+    &--wide {
+      width: 700px;
+    }
   }
 
   .posts__marker {
     top: 57px;
+    right: 20px;
   }
 
   .posts__comment {
@@ -135,6 +150,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding: 23px 0 0 0;
+    margin-bottom: 50px;
   }
 
   .posts__author {
@@ -220,17 +236,14 @@
     margin-bottom: 53px;
 
     &--wide {
+      width: 960px;
       margin-bottom: 21px;
     }
   }
 
-  /*Временно*/
-  .posts__item img {
-    height: 400px;
-  }
-  /*Временно*/
-  .posts__item--wide img {
-    height: 506px;
+  .posts__photo--wide {
+    width: 960px;
+    margin: 0 -10px;
   }
 
   .posts__item--wide .posts__likes {
