@@ -7,10 +7,10 @@
   padding: 0;
   margin: 0;
   position: absolute;
-  bottom: 40px;
-  left: 132px;
+  bottom: 44px;
+  left: 128px;
   z-index: 100;
-  width: 56px;
+  width: 64px;
   height: 12px;
   display: flex;
   justify-content: space-between;
@@ -20,14 +20,22 @@
 .slider__toggle {
   width: 6px;
   height: 6px;
+  margin: 4px;
   border-radius: 50%;
   background-color: @slider-gray;
 }
 
+.slider__input--1:checked ~ .slider__toggles .slider__toggle--1,
+.slider__input--2:checked ~ .slider__toggles .slider__toggle--2,
+.slider__input--3:checked ~ .slider__toggles .slider__toggle--3 {
+  background-color: transparent;
+  box-shadow: 0 0 0 3px @main-blue;
+}
+
 @media (min-width: 660px) {
   .slider__toggles {
-    bottom: 20px;
-    left: 302px;
+    bottom: 24px;
+    left: 298px;
   }
 
   .slider__toggles--price {
