@@ -1,5 +1,6 @@
 .reviews__inner {
   background-color: @white;
+  padding-bottom: 37px;
 }
 
 .reviews__list {
@@ -39,6 +40,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .reviews__inner {
+    background-color: #ffffff;
+    padding-bottom: 15px;
+  }
+
   .reviews__item {
     padding: 54px 0 56px 0;
   }
@@ -62,6 +68,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .reviews__inner {
+    padding-bottom: 0;
+  }
+
   .reviews__text {
     padding-bottom: 37px;
   }
@@ -79,6 +89,17 @@
   .reviews__item {
     width: 700px;
     margin: 0 auto;
-    padding: 170px 60px 60px 60px;
+    padding: 70px 60px 34px 60px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 79px;
+      height: 65px;
+      background-image: url("../img/icon-quotes.svg");
+      background-repeat: no-repeat;
+      margin: 0 auto;
+      margin-bottom: 35px;
+    }
   }
 }

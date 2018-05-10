@@ -26,20 +26,26 @@
   text-decoration: none;
 }
 
-.center() {
-  width: 280px;
-  padding: 0 20px;
-  margin: 0 auto;
+.wide() {
+  width: @mobile-width;
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+    padding: 0 10px;
+  }
 }
 
-.center-tab() {
-  width: 620px;
-  padding: 0 20px;
-  margin: 0 auto;
-}
+.wide-tablet() {
+  width: @mobile-width;
+  margin: 0 -20px;
 
-.center-desk() {
-  width: 940px;
-  padding: 0 10px;
-  margin: 0 auto;
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    margin: 0 -20px;
+  }
 }

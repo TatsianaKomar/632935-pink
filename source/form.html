@@ -8,9 +8,13 @@
   </head>
   <body>
     <header class="main-header main-header--opened main-header--nojs">
-      <div class="main-header__inner">
-        <a class="logo" href="index.html">
-          <img class="logo__image" src="img/logo-pink-white-mobile.svg" alt="Логотип мобильного приложения «Pink»">
+      <div class="main-header__inner center">
+        <a class="logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+            <img class="logo__image" src="img/logo-pink-white-mobile.svg" width="76" height="40" alt="Логотип мобильного приложения «Pink»">
+          </picture>
         </a>
         <nav class="main-navigation main-navigation--opened main-navigation--nojs">
           <button class="main-navigation__toggle" type="button">Открыть меню</button>
@@ -82,11 +86,11 @@
           <fieldset class="contest__contacts">
             <legend class="contest__title">Контактная информация</legend>
             <div class="contest__input-wrapper">
-              <div class="contest__item">
+              <div class="contest__item contest__item--tel">
                 <label class="contest__label" for="user-tel">Номер телефона</label>
                 <input class="contest__input" type="tel" name="user-tel" id="user-tel" placeholder="Номер, пожалуйста">
               </div>
-              <div class="contest__item">
+              <div class="contest__item contest__item--email">
                 <label class="contest__label" for="user-email">Адрес почты</label>
                 <input class="contest__input" type="email" name="user-email" id="user-email" placeholder="Введите почту *" required>
               </div>
@@ -135,7 +139,10 @@
     </main>
     <footer class="main-footer center">
       <a class="main-footer__logo" href="#">
-        <img class="main-footer__logo-image" src="img/logo-pink-blue-mobile.svg" alt="Логотип мобильного приложения «Pink»" height="80">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img class="main-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип мобильного приложения «Pink»">
+        </picture>
       </a>
       <section class="main-footer__socials socials">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>

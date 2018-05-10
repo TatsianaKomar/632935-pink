@@ -40,7 +40,7 @@
 .contest__input-wrapper {
   display: flex;
   flex-direction: column;
-  padding-bottom: 20px;
+  padding-bottom: 21px;
 }
 
 .contest__user {
@@ -51,6 +51,7 @@
 
 .contest__achivments {
   background-color: @light-gray;
+  .wide();
 
   .contest__input-wrapper {
     margin-top: 74px;
@@ -59,7 +60,7 @@
   .contest__title {
     position: relative;
     top: 55px;
-    padding: 0 30px;
+    padding: 0 40px;
     padding-top: 5px;
   }
 
@@ -69,7 +70,7 @@
     font-size: 18px;
     text-transform: none;
     /*Временно*/
-    padding: 10px 0 10px 70px;
+    padding: 10px 0 10px 90px;
     margin: 16px 0;
   }
 }
@@ -91,6 +92,7 @@
 .contest__os {
   background-color: @light-gray;
   margin: 0 -20px;
+  .wide();
 
   .contest__input-wrapper {
     margin-top: 74px;
@@ -109,14 +111,14 @@
     font-size: 18px;
     text-transform: none;
     /*Временно*/
-    padding: 10px 0 10px 70px;
+    padding: 10px 0 10px 90px;
     margin: 10px 0 15px 0;
   }
 }
 
 .contest__review {
   .contest__input-wrapper {
-    margin-top: 57px;
+    margin-top: 55px;
     margin-bottom: 27px;
   }
 
@@ -128,7 +130,7 @@
   .contest__input {
     font-size: 18px;
     line-height: 30px;
-    min-height: 184px;
+    min-height: 182px;
     resize: none;
     padding: 14px 20px 0 20px;
   }
@@ -238,8 +240,10 @@
   }
 
   .contest__text {
+    display: inline;
+
     &--add {
-      display: block;
+      display: inline;
     }
   }
 
@@ -269,7 +273,7 @@
     border: 2px solid @gray;
     border-radius: 2px;
     margin: 12px 0;
-    padding: 30px 0 12px 0;
+    padding: 28px 0 12px 0;
 
     .contest__input-wrapper {
       margin-top: 0;
@@ -281,7 +285,7 @@
     }
 
     .contest__label {
-      margin-left: 50px;
+      margin-left: 28px;
     }
   }
 
@@ -298,11 +302,6 @@
       padding: 0 30px;
     }
 
-    .contest__item {
-      flex-direction: column-reverse;
-      align-items: flex-start;
-    }
-
     .contest__input {
       align-self: stretch;
       margin: 22px 60px 0 60px;
@@ -313,13 +312,62 @@
     }
   }
 
+  .contest__contacts .contest__item {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      right: 62px;
+      width: 59px;
+      height: 58px;
+      background-color: @gray;
+      border: none;
+    }
+
+    &--tel {
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 24px;
+        right: 62px;
+        width: 59px;
+        height: 58px;
+        background-image: url("../img/icon-phone.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+      }
+    }
+
+    &--email {
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 24px;
+        right: 62px;
+        width: 59px;
+        height: 58px;
+        background-image: url("../img/icon-mail.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+      }
+    }
+  }
+
   .contest__achivments {
     background-color: @white;
     order: 4;
     border: 2px solid @gray;
     border-radius: 2px;
     margin: 28px 0;
-    padding: 22px 0 8px 0;
+    padding: 22px 0 6px 0;
 
     .contest__input-wrapper {
       margin-top: 0;
@@ -331,7 +379,7 @@
     }
 
     .contest__label {
-      margin-left: 50px;
+      margin-left: 28px;
     }
   }
 
@@ -379,6 +427,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 0;
   }
 
   .contest__input-wrapper {
@@ -387,7 +436,7 @@
   }
 
   .contest__description {
-    padding: 92px 68px 30px 68px;
+    padding: 92px 68px 25px 68px;
   }
 
   .contest__text {
@@ -399,7 +448,7 @@
     order: 1;
 
     .contest__input-wrapper {
-      padding-top: 30px;
+      padding-top: 34px;
     }
 
     .contest__input {
@@ -409,24 +458,23 @@
 
   .contest__os {
     width: 431px;
+    padding-bottom: 30px;
+    margin-top: 30px;
 
     .contest__label {
-      padding-left: 83px;
+      padding-left: 103px;
     }
   }
 
   .contest__contacts {
     padding: 20px 60px 0 60px;
+    margin-top: 32px;
 
     .contest__input-wrapper {
       width: 820px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-    }
-
-    .contest__item {
-      width: 375px;
     }
 
     .contest__input {
@@ -436,6 +484,31 @@
 
     .contest__label {
       padding: 10px 0 12px 18px;
+    }
+  }
+
+  .contest__contacts .contest__item {
+    width: 375px;
+
+    &::after {
+      top: 2px;
+      right: 2px;
+    }
+
+    &--tel {
+      position: relative;
+
+      &::after {
+        top: 2px;
+        right: 2px;
+      }
+    }
+
+    &--email {
+      &::after {
+        top: 2px;
+        right: 2px;
+      }
     }
   }
 
