@@ -65,8 +65,10 @@
         </div>
       </div>
       <section class="advantages">
-        <b class="advantages__text">Устали от серости мегаполиса?</b>
-        <b class="advantages__text">Нам есть, что вам предложить!</b>
+        <div class="advantages__intro">
+          <b class="advantages__text">Устали от серости мегаполиса?</b>
+          <b class="advantages__text">Нам есть, что вам предложить!</b>
+        </div>
         <div class="advantages__inner center">
           <h2 class="visually-hidden">Преимущества</h2>
           <ul class="advantages__list">
@@ -128,10 +130,13 @@
               </p>
             </blockquote>
           </div>
+          <input class="visually-hidden slider__input" type="radio" id="review-1" name="slides" checked>
+          <input class="visually-hidden" type="radio" id="review-2" name="slides">
+          <input class="visually-hidden" type="radio" id="review-3" name="slides">
           <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
+            <label class="slider__toggle slider__toggle--1" for="review-1"></label>
+            <label class="slider__toggle slider__toggle--2" for="review-2"></label>
+            <label class="slider__toggle slider__toggle--3" for="review-3"></label>
           </p>
         </div>
       </section>
@@ -165,7 +170,7 @@
               <div class="price__type">
                 <h3 class="price__title">Стандарт</h3>
                 <span class="price__sum">3,99 USD</span>
-                <span class="price__marker">Хит</span>
+                <span class="price__marker">хит</span>
               </div>
               <div class="price__options">
                 <p class="price__option price__option--checked"><span class="price__option-name">Розовый фильтр</span></p>
@@ -185,10 +190,13 @@
               </div>
             </div>
           </div>
-          <p class="price__toggles slider__toggles">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
+          <input class="visually-hidden" type="radio" id="price-1" name="slides">
+          <input class="visually-hidden" type="radio" id="price-2" name="slides" checked>
+          <input class="visually-hidden" type="radio" id="price-3" name="slides">
+          <p class="price__toggles slider__toggles slider__toggles--price">
+            <label class="slider__toggle slider__toggle--1" for="price-1"></label>
+            <label class="slider__toggle slider__toggle--2" for="price-2"></label>
+            <label class="slider__toggle slider__toggle--3" for="price-3"></label>
           </p>
         </div>
       </section>

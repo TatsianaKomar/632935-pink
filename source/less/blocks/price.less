@@ -1,13 +1,28 @@
 .price {
   background-color: @light-gray;
-  padding-top: 66px;
-  padding-bottom: 38px;
+  padding-top: 90px;
+  padding-bottom: 3px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../img/bg-triangle-white.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 27px;
+  }
 }
 
 .price__inner {
   .wide();
   padding-left: 0;
   padding-right: 0;
+  padding-bottom: 96px;
 }
 
 .price__list {
@@ -71,6 +86,8 @@
     display: block;
     background-image: url("../img/icon-yes.svg");
     background-repeat: no-repeat;
+    background-size: 31px 21px;
+    background-position: center top;
     height: 30px;
     width: 30px;
     position: absolute;
@@ -83,6 +100,7 @@
     display: block;
     background-image: url("../img/icon-no.svg");
     background-repeat: no-repeat;
+    background-size: 27px 26px;
     height: 30px;
     width: 30px;
     position: absolute;
@@ -117,7 +135,15 @@
 @media (min-width: @tablet-width) {
   .price {
     padding-bottom: 6px;
-    padding-top: 38px;
+    padding-top: 88px;
+
+    &::before {
+      height: 51px;
+    }
+  }
+  
+  .price__inner {
+    padding-bottom: 60px;
   }
 
   .price__list {
@@ -129,15 +155,17 @@
     width: 155px;
     border: none;
 
-    &::before {
-      content: "";
-      display: block;
-      background-image: url("../img/bg-hit-tablet.svg");
-      background-repeat: no-repeat;
-      height: 61px;
-      width: 61px;
-      position: absolute;
-      left: 2px;
+    &--popular {
+      &::before {
+        content: "";
+        display: block;
+        background-image: url("../img/bg-hit-tablet.svg");
+        background-repeat: no-repeat;
+        height: 61px;
+        width: 61px;
+        position: absolute;
+        left: 2px;
+      }
     }
 
     &:last-child {
@@ -214,8 +242,8 @@
   }
 
   .price__option--checked::after {
-    bottom: 13px;
-    left: 65px;
+    top: 13px;
+    left: 63px;
   }
 
   .price__option--canceled::after {
@@ -226,8 +254,12 @@
 
 @media (min-width: @desktop-width) {
   .price {
-    padding-top: 64px;
+    padding-top: 151px;
     padding-bottom: 31px;
+
+    &::before {
+      height: 85px;
+    }
   }
 
   .price__item {
@@ -281,7 +313,7 @@
   }
 
   .price__option--checked::after {
-    top: 27px;
+    top: 25px;
     left: 103px;
   }
 

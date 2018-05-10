@@ -13,6 +13,20 @@
 
 .contacts__inner {
   background-color: @white;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    height: 35px;
+    width: 100%;
+  }
 }
 
 .contacts__info {
@@ -94,6 +108,13 @@
     }
   }
 
+  .contacts__inner {
+    &::after {
+      bottom: -68px;
+      height: 68px;
+    }
+  }
+
   .contacts__info {
     &::after {
       right: 308px;
@@ -138,6 +159,13 @@
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-map-desktop@2x.jpg");
       background-size: 2400px auto;
+    }
+  }
+
+  .contacts__inner {
+    &::after {
+      bottom: -109px;
+      height: 109px;
     }
   }
 
