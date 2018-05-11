@@ -47,28 +47,6 @@
   padding: 0;
   position: absolute;
   z-index: 3;
-
-  &::after {
-    content: "";
-    width: 50px;
-    height: 25px;
-    background-image: url("../img/icon-menu-burger.svg");
-    background-repeat: no-repeat;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  &::before {
-    content: "";
-    width: 25px;
-    height: 25px;
-    background-image: url("../img/icon-menu-cross.svg");
-    background-repeat: no-repeat;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
 }
 
 .main-navigation--closed .main-navigation__toggle {
@@ -78,7 +56,7 @@
   top: -47px;
 }
 
-.main-navigation--closed .main-navigation__toggle::before {
+.main-navigation--closed .main-navigation__icon--opened {
   display: none;
 }
 
@@ -89,12 +67,25 @@
   top: -45px;
 }
 
-.main-navigation--opened .main-navigation__toggle::after {
+.main-navigation--opened .main-navigation__icon--closed {
   display: none;
 }
 
 .main-navigation--nojs .main-navigation__toggle {
   display: none;
+}
+
+.main-navigation__icon {
+  fill: @white;
+}
+
+.main-navigation__toggle:hover .main-navigation__icon,
+.main-navigation__toggle:focus .main-navigation__icon {
+  fill: @main-pink;
+}
+
+.main-navigation__toggle:active .main-navigation__icon {
+  fill: @trans-pink;
 }
 
 @media (max-width: 1200px) {
@@ -154,7 +145,15 @@
     }
 
     &--current {
-      box-shadow: 0 2px 0 0 #ffffff;
+      box-shadow: 0 2px 0 0 @white;
+
+      &:hover {
+        box-shadow: 0 2px 0 0 @main-pink;
+      }
+
+      &:active {
+        box-shadow: 0 2px 0 0 @trans-white;
+      }
     }
   }
 }
