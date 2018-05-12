@@ -55,6 +55,62 @@
 
 @media (min-width: 1200px) {
   .slider__toggles {
+    width: 940px;
+    padding: 0 10px;
+    left: 0;
+    bottom: 187px;
+  }
+
+  .slider__toggle {
     display: none;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+
+    &--previous,
+    &--next {
+      display: block;
+      width: 23px;
+      height: 44px;
+      margin: 0;
+      border-radius: 0;
+      background-color: transparent;
+    }
+
+    &--previous {
+      background-image: url("../img/icon-review-arrow-left.svg");
+      background-repeat: no-repeat;
+      background-size: 23px 44px;
+    }
+
+    &--next {
+      background-image: url("../img/icon-review-arrow-right.svg");
+      background-repeat: no-repeat;
+      background-size: 23px 44px;
+    }
+  }
+
+  .slider__input--1:checked ~ .slider__toggles .slider__toggle--1,
+  .slider__input--2:checked ~ .slider__toggles .slider__toggle--2,
+  .slider__input--3:checked ~ .slider__toggles .slider__toggle--3 {
+    box-shadow: none;
+    opacity: 0.3;
+  }
+
+  .slider__input--1:checked ~ .slider__toggles .slider__toggle--1:hover,
+  .slider__input--2:checked ~ .slider__toggles .slider__toggle--2:hover,
+  .slider__input--3:checked ~ .slider__toggles .slider__toggle--3:hover {
+    opacity: 0.6;
+  }
+
+  .slider__input--1:checked ~ .slider__toggles .slider__toggle--1:active,
+  .slider__input--2:checked ~ .slider__toggles .slider__toggle--2:active,
+  .slider__input--3:checked ~ .slider__toggles .slider__toggle--3:active {
+    opacity: 0.1;
   }
 }
