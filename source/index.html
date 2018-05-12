@@ -7,7 +7,10 @@
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
-    <svg style="display:none;">
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    <!--<svg style="display:none;">
       <symbol viewBox="0 0 74.426 22.859" id="main-logo">
         <g>
           <path d="M0,1.449c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.147v0.064 c0,4.861-4.057,7.373-8.854,7.373H2.544v6.825c0,0.708-0.58,1.288-1.288,1.288C0.58,22.859,0,22.279,0,21.571V1.449z M8.114,12.428 c3.734,0,6.182-1.996,6.182-4.958V7.405c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917H8.114z"/>
@@ -112,27 +115,27 @@
       <symbol id="htmlacademy-logo" viewBox="0 0 60 60">
         <path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
       </symbol>
-    </svg>
+    </svg>-->
     <header class="main-header main-header--opened main-header--nojs">
       <div class="main-header__inner center">
         <a class="logo">
           <svg class="logo__image logo__image--mobile" width="76" height="22">
-            <use xlink:href="#main-logo"></use>
+            <use xlink:href="#sprite-main-logo"></use>
           </svg>
           <svg class="logo__image logo__image--tablet" width="150" height="40">
-            <use xlink:href="#main-logo-tablet"></use>
+            <use xlink:href="#sprite-main-logo-tablet"></use>
           </svg>
           <svg class="logo__image logo__image--desktop" width="150" height="40">
-            <use xlink:href="#main-logo-desktop"></use>
+            <use xlink:href="#sprite-main-logo-desktop"></use>
           </svg>
         </a>
         <nav class="main-navigation main-navigation--opened main-navigation--nojs">
           <button class="main-navigation__toggle" type="button">
             <svg class="main-navigation__icon main-navigation__icon--opened" width="25" height="25">
-              <use xlink:href="#icon-opened"></use>
+              <use xlink:href="#sprite-icon-opened"></use>
             </svg>
             <svg class="main-navigation__icon main-navigation__icon--closed" width="50" height="25">
-              <use xlink:href="#icon-closed"></use>
+              <use xlink:href="#sprite-icon-closed"></use>
             </svg>
             Открыть меню
           </button>
@@ -160,7 +163,7 @@
           <section class="downloads">
             <h2 class="visually-hidden">Скачать приложение</h2>
             <b class="downloads__text">Взгляните на жизнь иначе!</b>
-            <a href="https://itunes.com" class="downloads__button" >Скачать приложение</a>
+            <a href="https://itunes.com" class="downloads__button">Скачать приложение</a>
             <ul class="downloads__list">
               <li class="downloads__item">
                 <a href="https://itunes.com" class="downloads__link downloads__link--apple">
@@ -248,7 +251,7 @@
               </p>
             </blockquote>
           </div>
-          <input class="visually-hidden slider__input slider__input--1" type="radio" id="review-1" name="review-slides" checked>
+          <input class="visually-hidden slider__input slider__input--1" type="radio" id="review-1" name="review-slides" checked="">
           <input class="visually-hidden slider__input slider__input--2" type="radio" id="review-2" name="review-slides">
           <input class="visually-hidden slider__input slider__input--3" type="radio" id="review-3" name="review-slides">
           <p class="reviews__toggles slider__toggles slider__toggles--reviews">
@@ -309,7 +312,7 @@
             </div>
           </div>
           <input class="visually-hidden slider__input slider__input--1" type="radio" id="price-1" name="price-slides">
-          <input class="visually-hidden slider__input slider__input--2" type="radio" id="price-2" name="price-slides" checked>
+          <input class="visually-hidden slider__input slider__input--2" type="radio" id="price-2" name="price-slides" checked="">
           <input class="visually-hidden slider__input slider__input--3" type="radio" id="price-3" name="price-slides">
           <p class="price__toggles slider__toggles slider__toggles--price">
             <label class="slider__toggle slider__toggle--1" for="price-1"></label>
@@ -345,10 +348,10 @@
     <footer class="main-footer main-footer--hidden center">
       <a class="main-footer__logo" href="#">
         <svg class="main-footer__logo-image main-footer__logo-image--mobile" width="150px" height="40">
-          <use xlink:href="#footer-logo"></use>
+          <use xlink:href="#sprite-footer-logo"></use>
         </svg>
         <svg class="main-footer__logo-image main-footer__logo-image--desktop" width="150px" height="40">
-          <use xlink:href="#footer-logo-desktop"></use>
+          <use xlink:href="#sprite-footer-logo-desktop"></use>
         </svg>
       </a>
       <section class="main-footer__socials socials">
@@ -370,7 +373,7 @@
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg class="copyright__logo" width="40" height="40">
-            <use xlink:href="#htmlacademy-logo"></use>
+            <use xlink:href="#sprite-htmlacademy-logo"></use>
           </svg>
         </a>
       </section>

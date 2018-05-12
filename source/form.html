@@ -7,7 +7,10 @@
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
-    <svg style="display:none;">
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    <!--<svg style="display:none;">
       <symbol viewBox="0 0 74.426 22.859" id="main-logo">
         <g>
           <path d="M0,1.449c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.147v0.064 c0,4.861-4.057,7.373-8.854,7.373H2.544v6.825c0,0.708-0.58,1.288-1.288,1.288C0.58,22.859,0,22.279,0,21.571V1.449z M8.114,12.428 c3.734,0,6.182-1.996,6.182-4.958V7.405c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917H8.114z"/>
@@ -112,27 +115,27 @@
       <symbol id="htmlacademy-logo" viewBox="0 0 60 60">
         <path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
       </symbol>
-    </svg>
+    </svg>-->
     <header class="main-header main-header--opened main-header--nojs">
       <div class="main-header__inner center">
         <a href="index.html" class="logo">
           <svg class="logo__image logo__image--mobile" width="76" height="22">
-            <use xlink:href="#main-logo"></use>
+            <use xlink:href="#sprite-main-logo"></use>
           </svg>
           <svg class="logo__image logo__image--tablet" width="150" height="40">
-            <use xlink:href="#main-logo-tablet"></use>
+            <use xlink:href="#sprite-main-logo-tablet"></use>
           </svg>
           <svg class="logo__image logo__image--desktop" width="150" height="40">
-            <use xlink:href="#main-logo-desktop"></use>
+            <use xlink:href="#sprite-main-logo-desktop"></use>
           </svg>
         </a>
         <nav class="main-navigation main-navigation--opened main-navigation--nojs">
           <button class="main-navigation__toggle" type="button">
             <svg class="main-navigation__icon main-navigation__icon--opened" width="25" height="25">
-              <use xlink:href="#icon-opened"></use>
+              <use xlink:href="#sprite-icon-opened"></use>
             </svg>
             <svg class="main-navigation__icon main-navigation__icon--closed" width="50" height="25">
-              <use xlink:href="#icon-closed"></use>
+              <use xlink:href="#sprite-icon-closed"></use>
             </svg>
             Открыть меню
           </button>
@@ -159,7 +162,7 @@
       </div>
       <form class="contest" action="https://echo.htmlacademy.ru" method="post">
         <div class="contest__inner center">
-          <div  class="contest__description">
+          <div class="contest__description">
             <p class="contest__text contest__text--main">
               Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
             </p>
@@ -172,11 +175,11 @@
             <div class="contest__input-wrapper">
               <div class="contest__item">
                 <label class="contest__label" for="user-surname">Фамилия:</label>
-                <input class="contest__input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию *" required>
+                <input class="contest__input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию *" required="">
               </div>
               <div class="contest__item">
                 <label class="contest__label" for="user-name">Имя:</label>
-                <input class="contest__input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя *" required>
+                <input class="contest__input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя *" required="">
               </div>
               <div class="contest__item">
                 <label class="contest__label" for="user-patonymic">Отчество:</label>
@@ -187,15 +190,15 @@
           <fieldset class="contest__achivments">
             <legend class="contest__title">Ваши безбашенные достижения в путешествии</legend>
             <div class="contest__input-wrapper">
-              <input class="contest__input contest__input--checkbox visually-hidden" type="checkbox" name="shark" id="shark" checked>
+              <input class="contest__input contest__input--checkbox visually-hidden" type="checkbox" name="shark" id="shark" checked="">
               <label class="contest__label" for="shark">Сделал селфи с акулой</label>
-              <input class="contest__input contest__input--checkbox  visually-hidden" type="checkbox" name="coal" id="coal" checked>
+              <input class="contest__input contest__input--checkbox  visually-hidden" type="checkbox" name="coal" id="coal" checked="">
               <label class="contest__label" for="coal">Обгорел на пляже</label>
               <input class="contest__input contest__input--checkbox  visually-hidden" type="checkbox" name="Norris" id="Norris">
               <label class="contest__label" for="Norris">Видел Чака Норриса</label>
               <input class="contest__input contest__input--checkbox visually-hidden" type="checkbox" name="suveniers" id="suveniers">
               <label class="contest__label" for="suveniers">Накупил сувениров</label>
-              <input class="contest__input contest__input--checkbox  visually-hidden" type="checkbox" name="tower" id="tower" checked>
+              <input class="contest__input contest__input--checkbox  visually-hidden" type="checkbox" name="tower" id="tower" checked="">
               <label class="contest__label" for="tower">Удержал башню</label>
               <input class="contest__input contest__input--checkbox  visually-hidden" type="checkbox" name="hotel" id="hotel">
               <label class="contest__label" for="hotel">Разгромил отель</label>
@@ -210,14 +213,14 @@
               </div>
               <div class="contest__item contest__item--email">
                 <label class="contest__label" for="user-email">Адрес почты</label>
-                <input class="contest__input" type="email" name="user-email" id="user-email" placeholder="Введите почту *" required>
+                <input class="contest__input" type="email" name="user-email" id="user-email" placeholder="Введите почту *" required="">
               </div>
             </div>
           </fieldset>
           <fieldset class="contest__os">
             <legend class="contest__title">С каким приложением путешествовали?</legend>
             <div class="contest__input-wrapper">
-              <input class="contest__input contest__input--radio visually-hidden" type="radio" name="os" id="os-ios" value="os-ios" checked>
+              <input class="contest__input contest__input--radio visually-hidden" type="radio" name="os" id="os-ios" value="os-ios" checked="">
               <label class="contest__label" for="os-ios">Pink для iOS</label>
               <input class="contest__input contest__input--radio visually-hidden" type="radio" name="os" value="os-android" id="os-android">
               <label class="contest__label" for="os-android">Pink на Android</label>
@@ -258,10 +261,10 @@
     <footer class="main-footer center">
       <a class="main-footer__logo" href="#">
         <svg class="main-footer__logo-image main-footer__logo-image--mobile" width="150px" height="40">
-          <use xlink:href="#footer-logo"></use>
+          <use xlink:href="#sprite-footer-logo"></use>
         </svg>
         <svg class="main-footer__logo-image main-footer__logo-image--desktop" width="150px" height="40">
-          <use xlink:href="#footer-logo-desktop"></use>
+          <use xlink:href="#sprite-footer-logo-desktop"></use>
         </svg>
       </a>
       <section class="main-footer__socials socials">
@@ -283,7 +286,7 @@
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg class="copyright__logo" width="40" height="40">
-            <use xlink:href="#htmlacademy-logo"></use>
+            <use xlink:href="#sprite-htmlacademy-logo"></use>
           </svg>
         </a>
       </section>

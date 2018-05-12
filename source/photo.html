@@ -7,7 +7,10 @@
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
-    <svg style="display:none;">
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    <!--<svg style="display:none;">
       <symbol viewBox="0 0 74.426 22.859" id="main-logo">
         <g>
           <path d="M0,1.449c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.147v0.064 c0,4.861-4.057,7.373-8.854,7.373H2.544v6.825c0,0.708-0.58,1.288-1.288,1.288C0.58,22.859,0,22.279,0,21.571V1.449z M8.114,12.428 c3.734,0,6.182-1.996,6.182-4.958V7.405c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917H8.114z"/>
@@ -125,27 +128,27 @@
         <path d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
         <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
       </symbol>
-    </svg>
+    </svg>-->
     <header class="main-header main-header--opened main-header--nojs">
       <div class="main-header__inner center">
         <a href="index.html" class="logo">
           <svg class="logo__image logo__image--mobile" width="76" height="22">
-            <use xlink:href="#main-logo"></use>
+            <use xlink:href="#sprite-main-logo"></use>
           </svg>
           <svg class="logo__image logo__image--tablet" width="150" height="40">
-            <use xlink:href="#main-logo-tablet"></use>
+            <use xlink:href="#sprite-main-logo-tablet"></use>
           </svg>
           <svg class="logo__image logo__image--desktop" width="150" height="40">
-            <use xlink:href="#main-logo-desktop"></use>
+            <use xlink:href="#sprite-main-logo-desktop"></use>
           </svg>
         </a>
         <nav class="main-navigation main-navigation--opened main-navigation--nojs">
           <button class="main-navigation__toggle" type="button">
             <svg class="main-navigation__icon main-navigation__icon--opened" width="25" height="25">
-              <use xlink:href="#icon-opened"></use>
+              <use xlink:href="#sprite-icon-opened"></use>
             </svg>
             <svg class="main-navigation__icon main-navigation__icon--closed" width="50" height="25">
-              <use xlink:href="#icon-closed"></use>
+              <use xlink:href="#sprite-icon-closed"></use>
             </svg>
             Открыть меню
           </button>
@@ -329,7 +332,7 @@
               <div class="user-post__process user-post__process--crop">
                 <button class="user-post__process-button  user-post__process-button--current" type="button">
                   <svg class="user-post__icon user-post__icon--crop" width="48" height="48">
-                    <use xlink:href="#icon-crop"></use>
+                    <use xlink:href="sprite-#icon-crop"></use>
                   </svg>
                   Кадрировать
                 </button>
@@ -337,7 +340,7 @@
               <div class="user-post__process user-post__process--fill">
                 <button class="user-post__process-button" type="button">
                   <svg class="user-post__icon user-post__icon--fill" width="48" height="48">
-                    <use xlink:href="#icon-fill"></use>
+                    <use xlink:href="#sprite-icon-fill"></use>
                   </svg>
                   Заливка
                 </button>
@@ -345,7 +348,7 @@
               <div class="user-post__process user-post__process--contrast">
                 <button class="user-post__process-button" type="button">
                   <svg class="user-post__icon user-post__icon--contrast" width="32" height="32">
-                    <use xlink:href="#icon-contrast"></use>
+                    <use xlink:href="#sprite-icon-contrast"></use>
                   </svg>
                   Контрастность
                 </button>
@@ -363,10 +366,10 @@
     <footer class="main-footer center">
       <a class="main-footer__logo" href="#">
         <svg class="main-footer__logo-image main-footer__logo-image--mobile" width="150" height="40">
-          <use xlink:href="#footer-logo"></use>
+          <use xlink:href="#sprite-footer-logo"></use>
         </svg>
         <svg class="main-footer__logo-image main-footer__logo-image--desktop" width="150" height="40">
-          <use xlink:href="#footer-logo-desktop"></use>
+          <use xlink:href="#sprite-ooter-logo-desktop"></use>
         </svg>
       </a>
       <section class="main-footer__socials socials">
@@ -388,7 +391,7 @@
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg class="copyright__logo" width="40" height="40">
-            <use xlink:href="#htmlacademy-logo"></use>
+            <use xlink:href="#sprite-htmlacademy-logo"></use>
           </svg>
         </a>
       </section>
