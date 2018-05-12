@@ -23,6 +23,15 @@
   margin: 4px;
   border-radius: 50%;
   background-color: @slider-gray;
+  opacity: 0.3;
+
+  &:hover:not(:checked) {
+    opacity: 1;
+  }
+
+  &:active:not(:checked) {
+    opacity: 0.1;
+  }
 }
 
 .slider__input--1:checked ~ .slider__toggles .slider__toggle--1,
@@ -30,6 +39,7 @@
 .slider__input--3:checked ~ .slider__toggles .slider__toggle--3 {
   background-color: transparent;
   box-shadow: 0 0 0 3px @main-blue;
+  opacity: 1;
 }
 
 @media (min-width: 660px) {

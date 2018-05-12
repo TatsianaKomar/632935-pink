@@ -10,26 +10,25 @@
   }
 }
 
-.main-footer__logo-image {
-  fill: @main-blue;
-}
-
 .main-footer__logo-glass {
   fill: @main-pink;
 }
-
 
 .main-footer__logo-star {
   fill: @main-blue;
 }
 
 .main-footer__logo {
+  .main-footer__logo-image {
+    fill: @main-blue;
+  }
+
   &:hover {
     .main-footer__logo-image {
       fill: @main-pink;
-    }  
+    }
   }
-  
+
   &:active {
     .main-footer__logo-image {
       fill: @main-blue;
@@ -43,8 +42,6 @@
     display: none;
   }
 }
-
-
 
 @media (min-width: @tablet-width) {
   .main-footer {

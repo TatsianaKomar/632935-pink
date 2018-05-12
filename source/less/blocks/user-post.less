@@ -42,7 +42,6 @@
   font-size: 0;
   background-color: transparent;
   border: 0;
-  margin: 0;
   padding: 0;
   height: 50px;
   width: 50px;
@@ -56,10 +55,10 @@
 }
 
 .user-post__process {
-  position: relative; 
+  position: relative;
   width: 80px;
-  
-  &:after {
+
+  &::after {
     content: "";
     display: block;
     height: 2px;
@@ -70,13 +69,13 @@
     z-index: 1;
   }
 
-  &:nth-child(2):after,
-  &:nth-child(3):after {
+  &:nth-child(2)::after,
+  &:nth-child(3)::after {
     display: none;
   }
 
   &--crop {
-    &:before {
+    &::before {
       content: "";
       display: block;
       height: 14px;
@@ -91,7 +90,7 @@
     }
 
     &:active {
-      &:before {
+      &::before {
         background-color: @main-pink;
       }
     }
@@ -157,26 +156,26 @@
     width: 100%;
     box-shadow: 0 1px 0 0 @gray-btn;
 
-    &:after {
+    &::after {
       width: 200px;
       bottom: 34px;
       left: 54px;
     }
 
-    &:nth-child(2):after,
-    &:nth-child(3):after {
+    &:nth-child(2)::after,
+    &:nth-child(3)::after {
       display: block;
     }
 
     &--crop {
-      &:before {
+      &::before {
         bottom: 28px;
         left: 200px;
       }
     }
 
     &--fill {
-      &:before {
+      &::before {
         content: "";
         display: block;
         height: 14px;
@@ -191,14 +190,14 @@
       }
 
       &:active {
-        &:before {
+        &::before {
           background-color: @main-pink;
         }
       }
     }
 
     &--contrast {
-      &:before {
+      &::before {
         content: "";
         display: block;
         height: 14px;
@@ -211,8 +210,9 @@
         border-radius: 50%;
         z-index: 2;
       }
+
       &:active {
-        &:before {
+        &::before {
           background-color: @main-pink;
         }
       }
@@ -291,27 +291,27 @@
     padding: 0;
     padding-bottom: 7px;
 
-    &:after {
+    &::after {
       width: 288px;
       left: 92px;
     }
 
     &--crop {
-      &:before {
+      &::before {
         left: 163px;
-      } 
+      }
     }
 
     &--fill {
-      &:before {
+      &::before {
         left: 340px;
-      } 
+      }
     }
 
     &--contrast {
-      &:before {
+      &::before {
         left: 252px;
-      } 
+      }
     }
   }
 
