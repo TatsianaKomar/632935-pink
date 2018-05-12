@@ -79,14 +79,14 @@ gulp.task("webp", function () {
 });
 
 gulp.task("build", function (done) {
-   run(
-     "clean",
-     "copy",
-     "style",
-     "sprite",
-     "html",
-     done
-   );
+  run(
+    "clean",
+    "copy",
+    "style",
+    "sprite",
+    "html",
+    done
+  );
 });
 
 gulp.task("serve", function() {
