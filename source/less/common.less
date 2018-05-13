@@ -21,6 +21,21 @@ picture {
   vertical-align: bottom;
 }
 
+iframe {
+  position: relative;
+  z-index: 2;
+  vertical-align: bottom;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    height: 370px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 507px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

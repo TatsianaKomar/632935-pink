@@ -6,17 +6,34 @@
 .copyright__text {
   font-size: 14px;
   line-height: 18px;
-  padding: 5px 17px 0 0;
   margin: 0;
+  padding-right: 20px;
 }
 
 .copyright__link {
   padding-top: 11px;
 }
 
-@media (min-width: 1200px) {
+.copyright__logo {
+  fill: @main-pink;
+
+  &:hover {
+    fill: @main-blue;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__text {
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
   .copyright__text {
     font-size: 18px;
-    padding: 0 16px 0 0;
   }
 }

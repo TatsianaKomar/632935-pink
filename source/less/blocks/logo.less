@@ -1,20 +1,57 @@
-.logo__image {
+.logo {
   width: 76px;
   height: 22px;
   display: block;
   padding: 22px 0 22px 0;
 }
 
-@media (min-width: @tablet-width) {
-  .logo__image {
+.logo__image {
+  fill: @white;
+
+  &:hover {
+    fill: @main-pink;
+  }
+
+  &:active {
+    fill: @trans-white;
+  }
+
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 660px) {
+  .logo {
     width: 150px;
-    height: auto;
+    height: 40px;
     padding: 25px 0 43px 0;
+  }
+
+  .logo__image {
+    &--tablet {
+      display: block;
+    }
+
+    &--mobile,
+    &--desktop {
+      display: none;
+    }
   }
 }
 
 @media (min-width: 1200px) {
   .logo__image {
-    padding: 25px 0 0 0;
+    padding: 0;
+
+    &--desktop {
+      display: block;
+    }
+
+    &--mobile,
+    &--tablet {
+      display: none;
+    }
   }
 }

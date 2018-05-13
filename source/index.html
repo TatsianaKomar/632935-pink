@@ -4,20 +4,38 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header main-header--opened main-header--nojs">
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    <header class="main-header main-header--closed main-header--nojs">
       <div class="main-header__inner center">
         <a class="logo">
-          <picture>
-            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
-            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-            <img class="logo__image" src="img/logo-pink-white-mobile.svg" width="76" height="40" alt="Логотип мобильного приложения «Pink»">
-          </picture>
+          <svg class="logo__image logo__image--mobile" width="76" height="22">
+            <use xlink:href="#sprite-main-logo"></use>
+          </svg>
+          <svg class="logo__image logo__image--tablet" width="150" height="40">
+            <use xlink:href="#sprite-main-logo-tablet"></use>
+          </svg>
+          <svg class="logo__image logo__image--desktop" width="150" height="40">
+            <use xlink:href="#sprite-main-logo-desktop"></use>
+          </svg>
         </a>
-        <nav class="main-navigation main-navigation--opened main-navigation--nojs">
-          <button class="main-navigation__toggle" type="button">Открыть меню</button>
+        <nav class="main-navigation main-navigation--closed main-navigation--nojs">
+          <button class="main-navigation__toggle" type="button">
+            <svg class="main-navigation__icon main-navigation__icon--opened" width="25" height="25">
+              <use xlink:href="#sprite-icon-opened"></use>
+            </svg>
+            <svg class="main-navigation__icon main-navigation__icon--closed" width="50" height="25">
+              <use xlink:href="#sprite-icon-closed"></use>
+            </svg>
+            Открыть меню
+          </button>
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
               <a class="main-navigation__link main-navigation__link--current">Главная</a>
@@ -29,7 +47,7 @@
               <a class="main-navigation__link" href="form.html">Конкурс</a>
             </li>
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="htmlacademy.ru">HTML Academy</a>
+              <a class="main-navigation__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             </li>
           </ul>
         </nav>
@@ -42,20 +60,20 @@
           <section class="downloads">
             <h2 class="visually-hidden">Скачать приложение</h2>
             <b class="downloads__text">Взгляните на жизнь иначе!</b>
-            <a href="#" class="downloads__button" >Скачать приложение</a>
+            <a href="https://itunes.com" class="downloads__button">Скачать приложение</a>
             <ul class="downloads__list">
               <li class="downloads__item">
-                <a href="#" class="downloads__link downloads__link--apple">
+                <a href="https://itunes.com" class="downloads__link downloads__link--apple">
                   Скачать для iOS
                 </a>
               </li>
               <li class="downloads__item">
-                <a href="#" class="downloads__link downloads__link--android">
+                <a href="https://play.google.com" class="downloads__link downloads__link--android">
                   Скачать для Android
                 </a>
               </li>
               <li class="downloads__item">
-                <a href="#" class="downloads__link downloads__link--win">
+                <a href="https://www.microsoft.com/store" class="downloads__link downloads__link--win">
                   Скачать для Windows
                 </a>
               </li>
@@ -130,13 +148,13 @@
               </p>
             </blockquote>
           </div>
-          <input class="visually-hidden slider__input slider__input--1" type="radio" id="review-1" name="review-slides" checked>
+          <input class="visually-hidden slider__input slider__input--1" type="radio" id="review-1" name="review-slides" checked="">
           <input class="visually-hidden slider__input slider__input--2" type="radio" id="review-2" name="review-slides">
           <input class="visually-hidden slider__input slider__input--3" type="radio" id="review-3" name="review-slides">
-          <p class="reviews__toggles slider__toggles">
-            <label class="slider__toggle slider__toggle--1" for="review-1"></label>
+          <p class="reviews__toggles slider__toggles slider__toggles--reviews">
+            <label class="slider__toggle slider__toggle--1 slider__toggle--previous" for="review-1"></label>
             <label class="slider__toggle slider__toggle--2" for="review-2"></label>
-            <label class="slider__toggle slider__toggle--3" for="review-3"></label>
+            <label class="slider__toggle slider__toggle--3 slider__toggle--next" for="review-3"></label>
           </p>
         </div>
       </section>
@@ -191,7 +209,7 @@
             </div>
           </div>
           <input class="visually-hidden slider__input slider__input--1" type="radio" id="price-1" name="price-slides">
-          <input class="visually-hidden slider__input slider__input--2" type="radio" id="price-2" name="price-slides" checked>
+          <input class="visually-hidden slider__input slider__input--2" type="radio" id="price-2" name="price-slides" checked="">
           <input class="visually-hidden slider__input slider__input--3" type="radio" id="price-3" name="price-slides">
           <p class="price__toggles slider__toggles slider__toggles--price">
             <label class="slider__toggle slider__toggle--1" for="price-1"></label>
@@ -222,14 +240,17 @@
             </ul>
           </div>
         </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5969989863975!2d30.321350591397557!3d59.93882911498399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sby!4v1526215021802" width="320" height="200" style="border:0" allowfullscreen></iframe>
       </section>
     </main>
     <footer class="main-footer main-footer--hidden center">
       <a class="main-footer__logo" href="#">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-desktop.svg">
-          <img class="main-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип мобильного приложения «Pink»">
-        </picture>
+        <svg class="main-footer__logo-image main-footer__logo-image--mobile" width="150px" height="40">
+          <use xlink:href="#sprite-footer-logo"></use>
+        </svg>
+        <svg class="main-footer__logo-image main-footer__logo-image--desktop" width="150px" height="40">
+          <use xlink:href="#sprite-footer-logo-desktop"></use>
+        </svg>
       </a>
       <section class="main-footer__socials socials">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
@@ -238,20 +259,25 @@
             <a href="#" class="socials__link socials__link--tw"><span class="visually-hidden"> Twitter</span></a>
           </li>
           <li class="socials__item">
-            <a href="#" class="socials__link socials__link--fb"><span class="visually-hidden">Facebook</span></a>
+            <a href="https://www.facebook.com/htmlacademy" class="socials__link socials__link--fb"><span class="visually-hidden">Facebook</span></a>
           </li>
           <li class="socials__item">
-            <a href="#" class="socials__link socials__link--yt"><span class="visually-hidden">YouTube</span></a>
+            <a href="https://www.youtube.com/user/htmlacademyru" class="socials__link socials__link--yt"><span class="visually-hidden">YouTube</span></a>
           </li>
         </ul>
       </section>
       <section class="main-footer__copyright copyright">
+        <h2 class="visually-hidden">Информация о разработчике</h2>
         <p class="copyright__text">Разработано</p>
-        <a class="copyright__link" href="htmlacademy.ru">
-          <img class="copyright_logo" src="img/logo-htmlacademy.svg" alt="Логотип компании «HTML-Academy»" height="34">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <svg class="copyright__logo" width="320" height="37">
+            <use xlink:href="#sprite-htmlacademy-logo"></use>
+          </svg>
         </a>
       </section>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
+    <script src="js/svg4everybody.min.js"></script>
+    <script src="js/picturefill.min.js"></script>
   </body>
 </html>
