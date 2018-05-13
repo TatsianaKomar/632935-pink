@@ -2,6 +2,8 @@ var navMain = document.querySelector('.main-navigation');
 var mainHead = document.querySelector('.main-header');
 var navToggle = document.querySelector('.main-navigation__toggle');
 
+
+
 navMain.classList.remove('main-navigation--nojs');
 mainHead.classList.remove('main-header--nojs');
 
