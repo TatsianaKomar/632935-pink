@@ -10,6 +10,9 @@
 }
 
 .advantages__intro {
+  background-color: @white;
+  text-align: center;
+
   &::after {
     content: "";
     display: block;
@@ -46,10 +49,11 @@
   .light();
   font-size: 24px;
   line-height: 30px;
-  background-color: @white;
   display: block;
   padding-bottom: 27px;
   text-align: center;
+  width: 210px;
+  margin: 0 auto;
 
   &:nth-child(1) {
     padding-top: 40px;
@@ -109,15 +113,16 @@
   .advantages__text {
     font-size: 40px;
     line-height: 48px;
-    margin: 0;
     padding: 0;
+    width: 620px;
 
     &:nth-child(1) {
       padding-top: 48px;
     }
 
     &:nth-child(2) {
-      padding: 0 50px 47px 50px;
+      padding: 0 0 47px 0;
+      width: 340px;
     }
   }
 
@@ -145,13 +150,16 @@
     font-size: 50px;
     line-height: 57px;
     padding-bottom: 4px;
+    width: 820px;
 
     &:nth-child(1) {
       padding-top: 70px;
     }
 
     &:nth-child(2) {
-      padding: 0 300px 77px 300px;
+      box-sizing: border-box;
+      width: 640px;
+      padding: 0 110px 77px 110px;
     }
   }
 

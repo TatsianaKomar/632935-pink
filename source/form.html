@@ -16,15 +16,16 @@
     <header class="main-header main-header--closed main-header--nojs">
       <div class="main-header__inner center">
         <a href="index.html" class="logo">
-          <svg class="logo__image logo__image--mobile" width="76" height="22">
-            <use xlink:href="#sprite-main-logo"></use>
-          </svg>
-          <svg class="logo__image logo__image--tablet" width="150" height="40">
-            <use xlink:href="#sprite-main-logo-tablet"></use>
-          </svg>
-          <svg class="logo__image logo__image--desktop" width="150" height="40">
-            <use xlink:href="#sprite-main-logo-desktop"></use>
-          </svg>
+          <picture class="logo__image-wrapper logo__image-wrapper--peace">
+            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+            <img class="logo__image logo__image--peace" src="img/logo-pink-white-mobile.svg" width="76" height="40" alt="Логотип мобильного приложения «Pink»">
+          </picture>
+          <picture class="logo__image-wrapper logo__image-wrapper--hover">
+            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop-hover.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet-hover.svg">
+            <img class="logo__image logo__image--hover" src="img/logo-pink-white-mobile-hover.svg" width="76" height="40" alt="Логотип мобильного приложения «Pink»">
+          </picture>
         </a>
         <nav class="main-navigation main-navigation--closed main-navigation--nojs">
           <button class="main-navigation__toggle" type="button">
