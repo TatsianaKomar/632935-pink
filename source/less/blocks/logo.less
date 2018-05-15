@@ -1,50 +1,58 @@
-.logo__image {
+.logo {
   width: 76px;
   height: 22px;
   display: block;
   padding: 22px 0 22px 0;
 }
 
-.logo__image-wrapper {
-  &--hover {
-    display: none;
+.logo__image {
+  margin-left: -72px;
+  margin-top: -17px;
+  fill: @white;
+
+  &:hover {
+    fill: @main-pink;
+  }
+
+  &:active {
+    fill: @white;
+    opacity: 0.3;
   }
 }
 
-.logo {
-  &:hover .logo__image-wrapper {
-    &--hover {
-      display: block;
-    }
-
-    &--peace {
-      display: none;
-    }
-  }
-
-  &:active .logo__image-wrapper {
-    &--hover {
-      display: none;
-    }
-
-    &--peace {
-      display: block;
-      opacity: 0.3;
-    }
-  }
+.logo__image-glasses-el,
+.logo__image-glasses,
+.logo__image-star {
+  display: none;
 }
 
-@media (min-width: 660px) {
-  .logo__image {
-    width: 150px;
+@media (min-width: @tablet-width) {
+  .logo {
+    width: 147px;
     height: 40px;
     padding: 25px 0 43px 0;
   }
+
+  .logo__image {
+    margin: 0;
+  }
+
+  .logo__image-glasses-el,
+  .logo__image-glasses {
+    display: block;
+  }
 }
 
-@media (min-width: 1200px) {
-  .logo__image {
-    padding: 0;
-    padding-top: 27px;
+@media (min-width: @desktop-width) {
+  .logo {
+    padding: 25px 0 0 0;
+  }
+
+  .logo__image-glasses-el {
+    fill: transparent;
+  }
+
+  .logo__image-star {
+    display: block;
   }
 }

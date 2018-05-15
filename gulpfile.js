@@ -47,7 +47,10 @@ gulp.task("style", function() {
 });
 
 gulp.task("images", function () {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src([
+    "source/img/**/*.{png,jpg}",
+    "source/img/*.svg"
+    ])
   .pipe(imagemin([
     imagemin.optipng({optimizationLevel: 3}),
     imagemin.jpegtran({progressive: true}),
